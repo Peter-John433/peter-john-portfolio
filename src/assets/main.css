@@ -1,4 +1,40 @@
 @import './base.css';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --text-color1: #D0D0;
+    --bg-color1: #D0D0D0;
+    --bg-color2: #01011a;
+    --logo-text-color: yellow;
+    --tect-color-2: red;
+    --font-1: 2.5rem;
+    --font-2: 2rem;
+    --font-size4: 18px;
+    -box-shadow1: 0, 0, 2.5rem #01011a;
+    -box-shadow1-text: 0 0 10px rgba(18, 247, 255, 0.3),
+    0 0 20px rgba(18, 247, 255, 0.3),
+    0 0 30px rgba(18, 247, 255, 0.3),
+    0 0 40px rgba(18, 247, 255, 0.3),
+    0 0 70px rgba(18, 247, 255, 0.3),
+    0 0 100px rgba(18, 247, 255, 0.3),
+    0 0 150px rgba(18, 247, 255, 0.3);
+    --font-h2: 3rem;
+}
+
+body{
+    background-color: var(--bg-color1);
+    padding: 0%;
+    margin: 0%;  
+}
