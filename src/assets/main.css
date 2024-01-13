@@ -24,7 +24,6 @@
     --font-1: 2.5rem;
     --font-2: 2rem;
     --font-size4: 18px;
-    -box-shadow1: 0, 0, 2.5rem #01011a;
     -box-shadow1-text: 0 0 10px rgba(18, 247, 255, 0.3),
     0 0 20px rgba(18, 247, 255, 0.3),
     0 0 30px rgba(18, 247, 255, 0.3),
@@ -36,10 +35,12 @@
 }
 
 body{
-    background-color: var(--bg-color1);
+    /* background-color: var(--bg-color1); */
+    background-color: #01011a;
     padding: 0%;
     margin: 0%;  
-    color: var(--bg-color2);
+    /* color: var(--bg-color2); */
+    color: #D0D0D0;
 }
 
 .container{
@@ -50,7 +51,7 @@ body{
 
 h3{
     font-weight: 700;
-    color: var(--bg-color2);
+    /* color: var(--bg-color2); */
 }
 
 
