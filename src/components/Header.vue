@@ -3,8 +3,8 @@
 </script>
 
 <template>
-   <div class="gen-container w-full">
-       <header class="flex justify-between items-center container">
+    <div class="gen-container w-full fixed z-10">
+       <header class="flex justify-between items-center container ">
            <div class="header-logo text-[26px] font-[700] font-sans text-[#01011a]">
                <span class="j-logo font-[700]">J</span>ohn
            </div>
@@ -23,7 +23,7 @@
             <i class='bx bx-menu'></i>
            </div>
        </header>
-   </div>
+    </div>
 </template>
 
 <style scoped>
