@@ -43,17 +43,36 @@
                   <a href="#" class="btn">Hire Me</a>
                </div>
 
-               <div class="social-icon">
-                  <a href=""><i class='bx bxl-facebook'></i></a>
-                  <a href="#"><i class='bx bxl-instagram-alt' ></i></a>
-                  <a href="#"><i class='bx bxl-upwork' ></i></a>
-                  <a href="#"><i class='bx bxl-linkedin' ></i></a>
-                  <a href="#"><i class='bx bxl-twitter' ></i></a>
+               <div class="social-icon mt-[8rem]">
+                  <a href=""><i class='bx bxl-facebook bx-tada'></i></a>
+                  <a href="#"><i class='bx bxl-instagram-alt bx-tada' ></i></a>
+                  <a href="#"><i class='bx bxl-upwork bx-tada' ></i></a>
+                  <a href="#"><i class='bx bxl-linkedin bx-tada' ></i></a>
+                  <a href="#"><i class='bx bxl-twitter bx-tada' ></i></a>
                </div>
          </div>
 
-         <div class="home-img">
-            <img src="@/assets/eche3-removebg-preview.png" alt="">
+         <div class="home-img relative">
+            <div class="img-box">
+               <img src="@/assets/eche3-removebg-preview.png" alt="">
+            </div>
+
+            <div class="liquid-shape absolute top-[0%] left-[-5%] z-[-1]">
+               <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
+               <path fill="yellow">
+                  <animate attributeName="d" 
+                     dur="10000ms"
+                     repeatCount="indefinite"
+                     transform="translate(100 100)"
+                     
+                     values="
+
+                     
+                     M465,312Q442,374,396.5,423Q351,472,284,477Q217,482,155,456.5Q93,431,57.5,374Q22,317,21.5,250Q21,183,59,128Q97,73,157,46.5Q217,20,280.5,31.5Q344,43,392.5,85Q441,127,464.5,188.5Q488,250,465,312Z"
+                  ></animate>
+               </path>
+               </svg>
+            </div>
          </div>
       </section>
    </div>
@@ -90,6 +109,7 @@
    opacity: 0;
  }
    
+ /* btn-box */
  .btn-box{
    display: flex; 
    justify-content: center;
@@ -99,7 +119,7 @@
    height: 46px;
  }
  .btn-box a.btn{
-    width: 150px; 
+    width: 200px; 
     background-color: #01011a;
     border: 1px solid #d0d0d0;
     display: inline-flex;
@@ -138,5 +158,79 @@
 
  a.btn:hover::before{
    width: 100%;
+ }
+ /* closed */
+
+ /* social-box */
+  .social-icon a{
+     display: inline-flex;
+     width: 50px;
+     height: 100%;
+     justify-content: center;
+     align-items: center;
+     border: 2px solid #d0d0d0;
+     padding: 10px 10px;
+     box-shadow:  0 0 .3rem yellow;
+     transition: .6s;
+     position: relative;
+     z-index: 1;
+     overflow: hidden;
+     border-radius: 50%;
+     margin-right: 1rem;
+     color: yellow;
+  }
+
+  .social-icon a::before{
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 0;
+   height: 100%;
+   background-color: yellow;
+   z-index: -1;
+   transition: .4s;
+ }
+
+ .social-icon a:hover::before{
+   width: 100%;
+ }
+ .social-icon a:hover{
+   box-shadow: 0 0 2px 2px yellow;
+   color: #01011a;
+   border: 1px solid transparent;
+ }
+  .social-icon i{
+   font-size: 1.5rem;
+  }
+
+  .social-icon a:hover{
+     background-color: #01011a;
+  }
+ /* closed */
+
+ .home-img{
+   position: relative;
+ }
+
+ .img-box{
+   text-align: center;
+   width: 500px;
+   height: auto;
+   margin-top: 5rem;
+ }
+
+ .img-box img{
+   max-width: 500px;
+   border-bottom-right-radius: 100%;
+   border-bottom-left-radius: 100%;
+   height: 78vh;
+   width: 100%;
+   object-fit: cover;
+   object-position: center;
+ }
+
+ .liquid-shape{
+    width: 80%;
  }
 </style>
