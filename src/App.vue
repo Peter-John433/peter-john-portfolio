@@ -4,8 +4,8 @@
 
 <template>
    <Header />
-   <div>
-       hello
+   <div class="container">
+      
    </div>
 </template>
 
