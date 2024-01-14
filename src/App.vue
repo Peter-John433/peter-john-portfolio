@@ -23,7 +23,7 @@
 
             <div class="change-text inline-flex m-0">
                <h3 class="font-[600] text-[1.5rem] me-3 text-[#D0D0D0]">
-                  And I'm
+                  
                </h3>
 
                <h3  class="font-[600] text-[1.5rem]">
