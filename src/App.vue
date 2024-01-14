@@ -1,6 +1,7 @@
 <script setup>
    import Header from './components/Header.vue'
    import About from './components/About.vue'
+   import Service from './components/Service.vue';
    import { ref } from 'vue'
 
    let myWord = document.querySelectorAll('.word');
@@ -12,7 +13,7 @@
 
 <template>
    <Header />
-   <div class="container pt-20">
+   <div class="container pt-20 w-full">
       <section id="home" class="home ">
          <div class="home-content">
             <h1>
@@ -101,6 +102,8 @@
       </section>
 
       <About />
+
+      <Service />
    </div>
 </template>
 
@@ -241,9 +244,10 @@
 
  .img-box{
    text-align: center;
-   width: 500px;
+   max-width: 400px;
    height: auto;
    margin-top: 5rem;
+   display: block;
  }
 
  .img-box img{

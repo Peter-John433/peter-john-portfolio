@@ -1,16 +1,16 @@
 <template>
    <div>
-        <div id="about" class="about bg-[yellow] rounded-xl mt-20 flex justify-center items-center gap-x-32">
+        <div id="about" class="about bg-[yellow] rounded-xl mt-20 flex justify-center items-center gap-x-20">
             <div class="img-about text-center relative rounded-full p-0 m-0 ">
-                <img src="@/assets/eche3-removebg-preview.png" class=" max-w-[500px] w-full h-[758px] object-cover rounded-br-full rounded-bl-full" alt="">
+                <img src="@/assets/eche3-removebg-preview.png" class=" max-w-[300px] w-full  object-cover rounded-br-full rounded-bl-full border-x-1 border-[#01011a] bg-[#01011a]" alt="">
             
                 <div class="about-info info-1">
-                    <span>5+</span>
-                    <p>Years of experience</p>
+                    <span class="plus">5+</span>
+                    <p class="mt-0">Years of experience</p>
                 </div>
 
                 <div class="about-info info-2">
-                    <span>100+</span>
+                    <span class="plus">100+</span>
                     <p>projects completed</p>
                 </div>
             </div>
@@ -19,14 +19,14 @@
                 <span>Let me introduce myself</span>
                 <h2>About Me</h2>
                 <h3>A good day</h3>
-                <p>
+                <p class="leading-6 text-[18px]">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem quae amet nesciunt dolore quas eaque. Sunt possimus voluptatem ad saepe.
                 </p>
                 <div class="btn-box">
-                    <a href="#" class="btn">Read more</a>
+                    <a href="#" class="btn ">Read more <i class='bx bxs-chevron-right-circle text-[1.5rem] ms-3 bx-flashing'></i></a>
                 </div>
 
-                <div class="social-icon mt-[5rem]">
+                <div class="social-icon mt-[1rem]">
                   <a href=""><i class='bx bxl-facebook bx-tada'></i></a>
                   <a href="#"><i class='bx bxl-instagram-alt bx-tada' ></i></a>
                   <a href="#"><i class='bx bxl-upwork bx-tada' ></i></a>
@@ -48,6 +48,7 @@
    /* width: 400px; */
    height: 46px;
  }
+
  .btn-box a.btn{
     width: 200px; 
     background-color: yellow;
@@ -145,7 +146,7 @@
  .social-icon a:hover{
    box-shadow: 0 0 2px 2px #01011a;
    color: yellow;
-   border: 1px solid transparent;
+   border: 1px solid yellow;
  }
   .social-icon i{
    font-size: 1.5rem;
@@ -158,12 +159,13 @@
 
  .about-info{
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     padding: 10px;
     font-size: 1rem;
     border-radius: 70% 30% 30% 70% / 30% 40% 30% 40%;
     animation: mother 6s linear infinite;
+    font-size: 10px;
  }
 
   .info-1{
@@ -172,6 +174,8 @@
      top: 40%;
      right: -15%;
      color: yellow;
+     border: 5px double yellow;
+     box-shadow: 0 0 5px 5px #01011a;
   }
 
   .info-2{
@@ -179,6 +183,13 @@
     bottom: 5%;
     background-color: #01011a;
     color: yellow;
+    border: 5px double yellow;
+  }
+
+  .plus{
+     font-size: 1.5rem;
+     color: #d0d0d0;
+     font-weight: 700;
   }
 
  @keyframes mother {
