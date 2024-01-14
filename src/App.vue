@@ -2,6 +2,7 @@
    import Header from './components/Header.vue'
    import About from './components/About.vue'
    import Service from './components/Service.vue';
+   import Skills from './components/Skills.vue';
    import { ref } from 'vue'
 
    let myWord = document.querySelectorAll('.word');
@@ -104,6 +105,8 @@
       <About />
 
       <Service />
+
+      <Skills />
    </div>
 </template>
 

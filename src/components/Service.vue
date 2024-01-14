@@ -57,12 +57,11 @@
 
         </div>
      </div>
+
 </template>
 
 <style scoped>
-  .section-service{
-     
-  }
+  
   .service-icon{
     font-size: 4rem;
     border: 2px solid #01011a;
@@ -127,5 +126,6 @@
  a.btn:hover::before{
    width: 100%;
  }
+
 
 </style>
