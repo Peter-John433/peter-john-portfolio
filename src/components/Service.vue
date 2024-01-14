@@ -9,7 +9,7 @@
             </div>
 
             <div class="section-service flex justify-center items-center mt-10 gap-x-10">
-                <div class="service-icon-cont flex flex-col justify-between items-center text-center bg-[yellow] text-[#01011a] p-5 rounded-xl">
+                <div class="service-icon-cont flex flex-col justify-between items-center text-center bg-[yellow] text-[#01011a] p-5 rounded-xl gap-y-1">
                     <i class='bx bx-layer service-icon' ></i>
                     <h3 class="text-[#01011a] text-[1.5rem]">
                         Frontend Developer
@@ -24,7 +24,7 @@
                     </div>
                 </div>
 
-                <div class="service-icon-cont flex flex-col justify-between items-center text-center bg-[yellow] text-[#01011a] p-5 rounded-xl">
+                <div class="service-icon-cont flex flex-col justify-between items-center text-center bg-[yellow] text-[#01011a] p-5 rounded-xl gap-y-1">
                     <i class='bx bx-desktop service-icon' ></i>
                     <h3 class="text-[#01011a] text-[1.5rem]">
                         Web designer
@@ -39,7 +39,7 @@
                     </div>
                 </div>
 
-                <div class="service-icon-cont flex flex-col justify-between items-center text-center bg-[yellow] text-[#01011a] p-5 rounded-xl">
+                <div class="service-icon-cont flex flex-col justify-between gap-y-1 items-center text-center bg-[yellow] text-[#01011a] p-5 rounded-xl">
                     <i class='bx bx-code-alt service-icon' ></i>
                     <h3 class="text-[01011a] text-[1.5rem]">
                         Frontend Developer
@@ -68,6 +68,13 @@
     border: 2px solid #01011a;
     border-radius: 100%;
     padding: 10px;
+    box-shadow: 0 0 5px 3px #01011a;
+  }
+  .service-icon-cont{
+     transition: all 500ms ease-in-out;
+  }
+  .service-icon-cont:hover{
+     transform: translateY(-.7rem);
   }
 
   .btn-box{
