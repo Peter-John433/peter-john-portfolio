@@ -54,10 +54,10 @@
 </template>
 
 <style scoped>
-  .gen-container{
+  /* .gen-container{ */
       /* background-color: var(--bg-color2); */
       /* background-color: #D0D0D0; */
-  }
+  /* } */
 
   .header-list a{
      font-weight: 500;

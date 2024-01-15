@@ -53,11 +53,11 @@
                </div>
 
                <div class="social-icon mt-[8rem]">
-                  <a href="#" class="my-social-link-1" :class="{'bg-[#d0d0d0] text-[blue]' : isDarkMode, ' bg-[blue] text-[#d0d0d0]' : !isDarkMode}"><i class='bx bxl-facebook bx-tada '></i></a>
-                  <a href="#" class="my-social-link-2" :class="{'bg-[#d0d0d0] text-[red]' : isDarkMode, ' bg-[red] text-[#d0d0d0]' : !isDarkMode}"><i class='bx bxl-instagram-alt bx-tada' ></i></a>
-                  <a href="#" class="my-social-link-3" :class="{'bg-[#d0d0d0] text-[#37ac37]' : isDarkMode, ' bg-[#37ac37] text-[#d0d0d0]' : !isDarkMode}"><i class='bx bxl-upwork bx-tada' ></i></a>
-                  <a href="#" class="my-social-link-4" :class="{'bg-[#d0d0d0] text-blue-700' : isDarkMode, ' bg-blue-700 text-[#d0d0d0]' : !isDarkMode}"><i class='bx bxl-linkedin bx-tada' ></i></a>
-                  <a href="#" class="my-social-link-5" :class="{'bg-[#d0d0d0] text-blue-500' : isDarkMode, ' bg-blue-500 text-[#d0d0d0]' : !isDarkMode}"><i class='bx bxl-twitter bx-tada' ></i></a>
+                  <a href="#" :class="{'bg-[#d0d0d0] before:bg-[blue] hover:text-[#d0d0d0] text-[blue]' : isDarkMode, ' bg-[blue] text-[#d0d0d0] before:bg-[#d0d0d0] hover:text-[blue]' : !isDarkMode}"><i class='bx bxl-facebook bx-tada '></i></a>
+                  <a href="#" :class="{'bg-[#d0d0d0] text-[red] before:bg-[red] hover:text-[#d0d0d0]' : isDarkMode, ' bg-[red] text-[#d0d0d0] before:bg-[#d0d0d0] hover:text-[red]' : !isDarkMode}"><i class='bx bxl-instagram-alt bx-tada' ></i></a>
+                  <a href="#" :class="{'bg-[#d0d0d0] text-[#37ac37] before:bg-[#37ac37] hover:text-[#d0d0d0]' : isDarkMode, ' bg-[#37ac37] text-[#d0d0d0] before:bg-[#d0d0d0] hover:text-[#37ac37]' : !isDarkMode}"><i class='bx bxl-upwork bx-tada' ></i></a>
+                  <a href="#" :class="{'bg-[#d0d0d0] text-blue-700 before:bg-blue-700 hover:text-[#d0d0d0]' : isDarkMode, ' bg-blue-700 text-[#d0d0d0] before:bg-[#d0d0d0] hover:text-blue-700' : !isDarkMode}"><i class='bx bxl-linkedin bx-tada' ></i></a>
+                  <a href="#" :class="{'bg-[#d0d0d0] text-blue-500 before:bg-blue-500 hover:text-[#d0d0d0]' : isDarkMode, ' bg-blue-500 text-[#d0d0d0] before:bg-[#d0d0d0] hover:text-blue-500' : !isDarkMode}"><i class='bx bxl-twitter bx-tada' ></i></a>
                </div>
          </div>
 
@@ -208,7 +208,6 @@
      align-items: center;
      border: 1px solid transparent;
      padding: 10px 10px;
-     /* box-shadow:  0 0 .3rem yellow; */
      transition: .6s;
      position: relative;
      z-index: 1;
@@ -218,99 +217,16 @@
   }
 
   /* .social-icon .my-social-link-1 */
-  .social-icon .my-social-link-1::before{
+  .social-icon a::before{
    content: '';
    position: absolute;
    top: 0;
    left: 0;
    width: 0;
    height: 100%;
-   background-color: #f1f1f1;
    z-index: -1;
    transition: .4s;
  }
-
- .social-icon .my-social-link-1:hover{
-   color: blue;
-   border: 1px solid transparent;
- }
-
- /* social-icon my-social-link-2 */
-   .social-icon .my-social-link-2::before{
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 0;
-      height: 100%;
-      background-color: red;
-      z-index: -1;
-      transition: .4s;
-   }
-
-   .social-icon .my-social-link-2:hover{
-      color: white;
-      border: 1px solid transparent;
-   }
- /* closed */
-
- /* social-icon my-social-link-3 */
-   .social-icon .my-social-link-3::before{
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 0;
-      height: 100%;
-      background-color: rgb(17, 177, 17);
-      z-index: -1;
-      transition: .4s;
-   }
-
-   .social-icon .my-social-link-3:hover{
-      color: #d0d0d0;
-      border: 1px solid transparent;
-   }
- /* closed */
-
- 
- /* social-icon my-social-link-4 */
- .social-icon .my-social-link-4::before{
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 0;
-      height: 100%;
-      background-color: #f1f1f1;
-      z-index: -1;
-      transition: .4s;
-   }
-
-   .social-icon .my-social-link-4:hover{
-      color: blue;
-      border: 1px solid transparent;
-   }
- /* closed */
-
- /* social-icon my-social-link-4 */
- .social-icon .my-social-link-5::before{
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 0;
-      height: 100%;
-      background-color: #d0d0d0;
-      z-index: -1;
-      transition: .4s;
-   }
-
-   .social-icon .my-social-link-5:hover{
-      color: #3b82f6;
-      border: 1px solid transparent;
-   }
- /* closed */
 
  .social-icon a:hover::before{
    width: 100%;
@@ -319,9 +235,6 @@
    font-size: 1.5rem;
   }
 
-  .social-icon a:hover{
-     background-color: #01011a;
-  }
  /* closed */
 
  .home-img{

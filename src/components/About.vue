@@ -1,8 +1,15 @@
+<script setup>
+  import { storeToRefs } from 'pinia';
+  import { colorMode } from '@/stores/Mode';
+  const useModeStore = colorMode();
+  const { isDarkMode } = storeToRefs(useModeStore);
+</script>
+
 <template>
    <div>
-        <div id="about" class="about bg-[yellow] rounded-xl mt-20 flex justify-center items-center gap-x-20">
+        <div id="about" class="about rounded-xl mt-20 pb-10 flex justify-center items-center gap-x-20" :class="{'bg-[#D0D0D0] text-[#0e1217]' : isDarkMode, 'bg-[#0e1217] text-[#D0D0D0]' : !isDarkMode}">
             <div class="img-about text-center relative rounded-full p-0 m-0 ">
-                <img src="@/assets/eche3-removebg-preview.png" class=" max-w-[300px] w-full  object-cover rounded-br-full rounded-bl-full border-x-1 border-[#01011a] bg-[#01011a]" alt="">
+                <img src="@/assets/eche3-removebg-preview.png" class=" max-w-[300px] w-full  object-cover rounded-br-full rounded-bl-full border-x-1" :class="{'bg-[#0e1217] border-[#0e1217]' : isDarkMode, 'bg-[#d0d0d0] border-[#d0d0d0]' : !isDarkMode}" alt="">
             
                 <div class="about-info info-1">
                     <span class="plus">5+</span>
@@ -23,15 +30,16 @@
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem quae amet nesciunt dolore quas eaque. Sunt possimus voluptatem ad saepe.
                 </p>
                 <div class="btn-box">
-                    <a href="#" class="btn ">Read more <i class='bx bxs-chevron-right-circle text-[1.5rem] ms-3 bx-flashing'></i></a>
+                    <a href="#" class="btn" :class="{'bg-[#0e1217] before:bg-[#030314] hover:text-[#d0d0d0] text-[yellow] before:border-2 before:border-[#0e1217]' : isDarkMode, 'bg-[#0e1217] text-[#D0D0D0]' : !isDarkMode}">Read more <i class='bx bxs-chevron-right-circle text-[1.5rem] ms-3 bx-flashing'></i></a>
                 </div>
 
+                <!-- just like in the app.vue social-icon-box verse-versa -->
                 <div class="social-icon mt-[1rem]">
-                  <a href=""><i class='bx bxl-facebook bx-tada'></i></a>
-                  <a href="#"><i class='bx bxl-instagram-alt bx-tada' ></i></a>
-                  <a href="#"><i class='bx bxl-upwork bx-tada' ></i></a>
-                  <a href="#"><i class='bx bxl-linkedin bx-tada' ></i></a>
-                  <a href="#"><i class='bx bxl-twitter bx-tada' ></i></a>
+                  <a href="#" :class="{'bg-[#d0d0d0] before:bg-[blue] hover:text-[#d0d0d0] text-[blue]' : !isDarkMode, ' bg-[blue] text-[#d0d0d0] before:bg-[#d0d0d0] hover:text-[blue]' : isDarkMode}"><i class='bx bxl-facebook bx-tada '></i></a>
+                  <a href="#" :class="{'bg-[#d0d0d0] text-[red] before:bg-[red] hover:text-[#d0d0d0]' : !isDarkMode, ' bg-[red] text-[#d0d0d0] before:bg-[#d0d0d0] hover:text-[red]' : isDarkMode}"><i class='bx bxl-instagram-alt bx-tada' ></i></a>
+                  <a href="#" :class="{'bg-[#d0d0d0] text-[#37ac37] before:bg-[#37ac37] hover:text-[#d0d0d0]' : !isDarkMode, ' bg-[#37ac37] text-[#d0d0d0] before:bg-[#d0d0d0] hover:text-[#37ac37]' : isDarkMode}"><i class='bx bxl-upwork bx-tada' ></i></a>
+                  <a href="#" :class="{'bg-[#d0d0d0] text-blue-700 before:bg-blue-700 hover:text-[#d0d0d0]' : !isDarkMode, ' bg-blue-700 text-[#d0d0d0] before:bg-[#d0d0d0] hover:text-blue-700' : isDarkMode}"><i class='bx bxl-linkedin bx-tada' ></i></a>
+                  <a href="#" :class="{'bg-[#d0d0d0] text-blue-500 before:bg-blue-500 hover:text-[#d0d0d0]' : !isDarkMode, ' bg-blue-500 text-[#d0d0d0] before:bg-[#d0d0d0] hover:text-blue-500' : isDarkMode}"><i class='bx bxl-twitter bx-tada' ></i></a>
                </div>
             </div>
         </div>
@@ -45,18 +53,14 @@
    justify-content: center;
    align-items: center;
    column-gap: 2rem;
-   /* width: 400px; */
    height: 46px;
  }
 
  .btn-box a.btn{
     width: 200px; 
-    background-color: yellow;
-    border: 1px solid #01011a;
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    color: var(--bg-color2);
     height: 100%;
     font-weight: 700;
     letter-spacing: 1px;
@@ -66,13 +70,6 @@
     overflow: hidden;
     border-radius: 5px;
     z-index: 1;
-    color: #01011a;
- }
-
- .btn-box a.btn:hover{
-   box-shadow: 0 0 2px 2px #01011a;
-   color: yellow;
-   border: 1px solid transparent;
  }
 
  a.btn::before{
@@ -82,7 +79,6 @@
    left: 0;
    width: 0;
    height: 100%;
-   background-color: #01011a;
    z-index: -1;
    transition: .4s;
  }
@@ -92,7 +88,6 @@
  }
 
   .about-content{
-     color: #01011a;
      font-size: 1.5rem;
      width: 600px;
      font-weight: 700;
@@ -104,58 +99,47 @@
      
   }
  .about-content span{
-    color: #01011a;
     font-size: 2.5rem;
     font-weight: 900;
     text-transform: capitalize;
- }
+  }
 
- .social-icon a{
+  /* social-box  */
+  .social-icon a{
      display: inline-flex;
      width: 50px;
      height: 100%;
      justify-content: center;
      align-items: center;
-     border: 2px solid #01011a;
+     border: 1px solid transparent;
      padding: 10px 10px;
-     box-shadow:  0 0 .3rem #01011a;
      transition: .6s;
      position: relative;
      z-index: 1;
      overflow: hidden;
      border-radius: 50%;
      margin-right: 1rem;
-     color: #01011a;
   }
 
-  .social-icon a::before{
-   content: '';
-   position: absolute;
-   top: 0;
-   left: 0;
-   width: 0;
-   height: 100%;
-   background-color: #01011a;
-   z-index: -1;
-   transition: .4s;
- }
-
- .social-icon a:hover::before{
-   width: 100%;
- }
- .social-icon a:hover{
-   box-shadow: 0 0 2px 2px #01011a;
-   color: yellow;
-   border: 1px solid yellow;
- }
-  .social-icon i{
-   font-size: 1.5rem;
+  /* .social-icon .my-social-link-1 */
+    .social-icon a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    z-index: -1;
+    transition: .4s;
   }
 
-  .social-icon a:hover{
-     background-color: #01011a;
+  .social-icon a:hover::before{
+    width: 100%;
   }
- /* closed */
+    .social-icon i{
+    font-size: 1.5rem;
+    }
+  /* closed */
 
  .about-info{
     position: absolute;
@@ -170,18 +154,18 @@
 
   .info-1{
      position: absolute;
-     background-color: #01011a;
+     background-color: #0e1217;
      top: 40%;
      right: -15%;
      color: yellow;
      border: 5px double yellow;
-     box-shadow: 0 0 5px 5px #01011a;
+     /* box-shadow: 0 0 5px 5px #01011a; */
   }
 
   .info-2{
     position: absolute;
     bottom: 5%;
-    background-color: #01011a;
+    background-color: #0e1217;
     color: yellow;
     border: 5px double yellow;
   }
