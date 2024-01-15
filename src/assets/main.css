@@ -1,4 +1,4 @@
-@import './base.css';
+/* @import './base.css'; */
 /* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400&display=swap'); */
 @tailwind base;
 @tailwind components;
@@ -10,7 +10,7 @@
     padding: 0%;
     text-decoration: none;
     list-style: none;
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -36,11 +36,11 @@
 
 body{
     /* background-color: var(--bg-color1); */
-    background-color: #01011a;
+    /* background-color: #01011a; */
     padding: 0%;
     margin: 0%;  
     /* color: var(--bg-color2); */
-    color: #D0D0D0;
+    /* color: #D0D0D0; */
 }
 
 .container{
@@ -69,4 +69,12 @@ h3{
         width: 100%;
         margin: auto;
     }
+}
+
+.bg-dark-mode{
+    @apply bg-[#07090b];
+}
+
+.bg-light-mode{
+    @apply bg-[#f6f6ff];
 }

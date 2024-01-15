@@ -3,7 +3,12 @@
    import About from './components/About.vue'
    import Service from './components/Service.vue';
    import Skills from './components/Skills.vue';
+   import { colorMode } from './stores/Mode';
+   import { storeToRefs } from 'pinia';
    import { ref } from 'vue'
+
+   const useModeStore = colorMode();
+   const { isDarkMode } = storeToRefs(useModeStore)
 
    let myWord = document.querySelectorAll('.word');
    myWord.forEach = ((myWord) => {
@@ -14,10 +19,11 @@
 
 <template>
    <Header />
-   <div class="container pt-20 w-full">
+   <div :class="{'bg-[#0e1217] text-[#D0D0D0]' : isDarkMode, 'bg-[#D0D0D0] text-[#0e1217]' : !isDarkMode}">
+   <div class="container pt-20 w-full" >
       <section id="home" class="home ">
          <div class="home-content">
-            <h1>
+            <h1 :class="{' text-[#D0D0D0]' : isDarkMode, ' text-[#0e1217]' : !isDarkMode}">
                 Hi!, I'm Peter John
             </h1>
 
@@ -32,7 +38,7 @@
                </h3>
             </div>
 
-               <p class=" leading-6 text-[18px] text-[yellow]">
+               <p class=" leading-6 text-[18px]" :class="{' text-[yellow]' : isDarkMode, 'bg-[#D0D0D0] text-[#0e1217]' : !isDarkMode}">
                   Frontend developer, Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur culpa corrupti quasi praesentium ipsam, sunt quo cumque vero voluptatem mollitia!
                </p>
            
@@ -47,11 +53,11 @@
                </div>
 
                <div class="social-icon mt-[8rem]">
-                  <a href=""><i class='bx bxl-facebook bx-tada'></i></a>
-                  <a href="#"><i class='bx bxl-instagram-alt bx-tada' ></i></a>
-                  <a href="#"><i class='bx bxl-upwork bx-tada' ></i></a>
-                  <a href="#"><i class='bx bxl-linkedin bx-tada' ></i></a>
-                  <a href="#"><i class='bx bxl-twitter bx-tada' ></i></a>
+                  <a href="#" class="my-social-link-1" :class="{'bg-[#d0d0d0] text-[blue]' : isDarkMode, ' bg-[blue] text-[white]' : !isDarkMode}"><i class='bx bxl-facebook bx-tada '></i></a>
+                  <a href="#" class="my-social-link-2" :class="{'bg-[#d0d0d0] text-[red]' : isDarkMode, ' bg-[red] text-[#d0d0d0]' : !isDarkMode}"><i class='bx bxl-instagram-alt bx-tada' ></i></a>
+                  <a href="#" class="my-social-link-3"><i class='bx bxl-upwork bx-tada' ></i></a>
+                  <a href="#" class="my-social-link-4"><i class='bx bxl-linkedin bx-tada' ></i></a>
+                  <a href="#" class="my-social-link-5"><i class='bx bxl-twitter bx-tada' ></i></a>
                </div>
          </div>
 
@@ -60,9 +66,9 @@
                <img src="@/assets/eche3-removebg-preview.png" alt="">
             </div>
 
-            <div class="liquid-shape absolute top-[0%] left-[-5%] z-[-1]">
+            <div class="liquid-shape absolute top-[0%] left-[-5%] z-[-1]" >
                <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
-               <path fill="yellow">
+               <path fill="#D0D0D0">
                   <animate attributeName="d" 
                      dur="10000ms"
                      repeatCount="indefinite"
@@ -76,7 +82,7 @@
             <div class="liquid-shape-2 absolute top-[1%] z-[-1] left-[-5%]">
                <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
                <defs>
-                  <pattern id="pattern" x="0" y="0" width="28" height="49" patternUnits="userSpaceOnUse" fill="#01011a">
+                  <pattern id="pattern" x="0" y="0" width="28" height="49" patternUnits="userSpaceOnUse" fill="#D0D0D0">
                      <path >
                         <animate attributeName="d"
                         repeatDur="10000ms"
@@ -107,6 +113,7 @@
       <Service />
 
       <Skills />
+   </div>
    </div>
 </template>
 
@@ -152,7 +159,7 @@
  }
  .btn-box a.btn{
     width: 200px; 
-    background-color: #01011a;
+    /* background-color: #01011a; */
     border: 1px solid #d0d0d0;
     display: inline-flex;
     justify-content: center;
@@ -167,7 +174,7 @@
     overflow: hidden;
     border-radius: 5px;
     z-index: 1;
-    color: yellow;
+    /* color: yellow; */
  }
 
  .btn-box a.btn:hover{
@@ -202,35 +209,78 @@
      align-items: center;
      border: 2px solid #d0d0d0;
      padding: 10px 10px;
-     box-shadow:  0 0 .3rem yellow;
+     /* box-shadow:  0 0 .3rem yellow; */
      transition: .6s;
      position: relative;
      z-index: 1;
      overflow: hidden;
      border-radius: 50%;
      margin-right: 1rem;
-     color: yellow;
   }
 
-  .social-icon a::before{
+  /* .social-icon .my-social-link-1 */
+  .social-icon .my-social-link-1::before{
    content: '';
    position: absolute;
    top: 0;
    left: 0;
    width: 0;
    height: 100%;
-   background-color: yellow;
+   background-color: #f1f1f1;
    z-index: -1;
    transition: .4s;
  }
 
+ .social-icon .my-social-link-1:hover{
+   /* box-shadow: 0 0 2px 2px yellow; */
+   color: blue;
+   border: 1px solid transparent;
+ }
+
+ /* social-icon my-social-link-2 */
+   .social-icon .my-social-link-2::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background-color: red;
+      z-index: -1;
+      transition: .4s;
+   }
+
+   .social-icon .my-social-link-2:hover{
+      /* box-shadow: 0 0 2px 2px yellow; */
+      color: white;
+      border: 1px solid transparent;
+   }
+
+ /* closed */
+
+ /* social-icon my-social-link-3 */
+   .social-icon .my-social-link-1::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background-color: #f1f1f1;
+      z-index: -1;
+      transition: .4s;
+   }
+
+   .social-icon .my-social-link-1:hover{
+      /* box-shadow: 0 0 2px 2px yellow; */
+      color: blue;
+      border: 1px solid transparent;
+   }
+
+ /* closed */
+
  .social-icon a:hover::before{
    width: 100%;
- }
- .social-icon a:hover{
-   box-shadow: 0 0 2px 2px yellow;
-   color: #01011a;
-   border: 1px solid transparent;
  }
   .social-icon i{
    font-size: 1.5rem;

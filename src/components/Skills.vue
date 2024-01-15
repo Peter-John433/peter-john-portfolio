@@ -101,9 +101,18 @@
                 </div>
                 <div class="skill-right">
                     <h3>Profession</h3>
+                    <div>
+                        <h2>
+                            90%
+                        </h2>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
+
+    <div :class="{'bg-[#0e1217] text-white' : isDarkMode, 'bg-[#f2f2f2] text-[black]' : !isDarkMode}">
+        hello
     </div>
 </template>
 
