@@ -48,16 +48,16 @@
                </div>
 
                <div class="btn-box flex justify-between mt-[1.5rem] w-[320px] h-[46px]">
-                  <a href="#" class="btn">Download CV</a>
-                  <a href="#" class="btn">Hire Me</a>
+                  <a href="#" class="btn" :class="{' text-[yellow]' : isDarkMode, 'bg-[#D0D0D0] text-[#0e1217]' : !isDarkMode}">Download CV</a>
+                  <a href="#" class="btn" :class="{' text-[yellow]' : isDarkMode, 'bg-[#D0D0D0] text-[#0e1217]' : !isDarkMode}">Hire Me</a>
                </div>
 
                <div class="social-icon mt-[8rem]">
-                  <a href="#" class="my-social-link-1" :class="{'bg-[#d0d0d0] text-[blue]' : isDarkMode, ' bg-[blue] text-[white]' : !isDarkMode}"><i class='bx bxl-facebook bx-tada '></i></a>
+                  <a href="#" class="my-social-link-1" :class="{'bg-[#d0d0d0] text-[blue]' : isDarkMode, ' bg-[blue] text-[#d0d0d0]' : !isDarkMode}"><i class='bx bxl-facebook bx-tada '></i></a>
                   <a href="#" class="my-social-link-2" :class="{'bg-[#d0d0d0] text-[red]' : isDarkMode, ' bg-[red] text-[#d0d0d0]' : !isDarkMode}"><i class='bx bxl-instagram-alt bx-tada' ></i></a>
-                  <a href="#" class="my-social-link-3"><i class='bx bxl-upwork bx-tada' ></i></a>
-                  <a href="#" class="my-social-link-4"><i class='bx bxl-linkedin bx-tada' ></i></a>
-                  <a href="#" class="my-social-link-5"><i class='bx bxl-twitter bx-tada' ></i></a>
+                  <a href="#" class="my-social-link-3" :class="{'bg-[#d0d0d0] text-[#37ac37]' : isDarkMode, ' bg-[#37ac37] text-[#d0d0d0]' : !isDarkMode}"><i class='bx bxl-upwork bx-tada' ></i></a>
+                  <a href="#" class="my-social-link-4" :class="{'bg-[#d0d0d0] text-blue-700' : isDarkMode, ' bg-blue-700 text-[#d0d0d0]' : !isDarkMode}"><i class='bx bxl-linkedin bx-tada' ></i></a>
+                  <a href="#" class="my-social-link-5" :class="{'bg-[#d0d0d0] text-blue-500' : isDarkMode, ' bg-blue-500 text-[#d0d0d0]' : !isDarkMode}"><i class='bx bxl-twitter bx-tada' ></i></a>
                </div>
          </div>
 
@@ -164,7 +164,7 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    color: var(--bg-color2);
+    /* color: var(--bg-color2); */
     height: 100%;
     font-weight: 700;
     letter-spacing: 1px;
@@ -178,10 +178,9 @@
  }
 
  .btn-box a.btn:hover{
-   box-shadow: 0 0 2px 2px yellow;
    color: #01011a;
    border: 1px solid transparent;
- }
+  }
 
  a.btn::before{
    content: '';
@@ -207,7 +206,7 @@
      height: 100%;
      justify-content: center;
      align-items: center;
-     border: 2px solid #d0d0d0;
+     border: 1px solid transparent;
      padding: 10px 10px;
      /* box-shadow:  0 0 .3rem yellow; */
      transition: .6s;
@@ -232,7 +231,6 @@
  }
 
  .social-icon .my-social-link-1:hover{
-   /* box-shadow: 0 0 2px 2px yellow; */
    color: blue;
    border: 1px solid transparent;
  }
@@ -251,15 +249,33 @@
    }
 
    .social-icon .my-social-link-2:hover{
-      /* box-shadow: 0 0 2px 2px yellow; */
       color: white;
       border: 1px solid transparent;
    }
-
  /* closed */
 
  /* social-icon my-social-link-3 */
-   .social-icon .my-social-link-1::before{
+   .social-icon .my-social-link-3::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background-color: rgb(17, 177, 17);
+      z-index: -1;
+      transition: .4s;
+   }
+
+   .social-icon .my-social-link-3:hover{
+      color: #d0d0d0;
+      border: 1px solid transparent;
+   }
+ /* closed */
+
+ 
+ /* social-icon my-social-link-4 */
+ .social-icon .my-social-link-4::before{
       content: '';
       position: absolute;
       top: 0;
@@ -271,12 +287,29 @@
       transition: .4s;
    }
 
-   .social-icon .my-social-link-1:hover{
-      /* box-shadow: 0 0 2px 2px yellow; */
+   .social-icon .my-social-link-4:hover{
       color: blue;
       border: 1px solid transparent;
    }
+ /* closed */
 
+ /* social-icon my-social-link-4 */
+ .social-icon .my-social-link-5::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background-color: #d0d0d0;
+      z-index: -1;
+      transition: .4s;
+   }
+
+   .social-icon .my-social-link-5:hover{
+      color: #3b82f6;
+      border: 1px solid transparent;
+   }
  /* closed */
 
  .social-icon a:hover::before{
