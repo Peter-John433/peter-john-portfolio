@@ -6,8 +6,8 @@
 
 *{
     box-sizing: border-box;
-    margin: 0%;
-    padding: 0%;
+    /* margin: 0%; */
+    /* padding: 0%; */
     text-decoration: none;
     list-style: none;
     /* scroll-behavior: smooth; */
@@ -67,8 +67,8 @@ h3{
     .container{
         max-width: 100%;
         width: 100%;
-        margin: auto;
-        padding: auto;
+        /* margin: auto; */
+        
     }
 }
 
