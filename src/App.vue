@@ -1,8 +1,8 @@
 <script setup>
-   import Header from './components/Header.vue'
+   // import Header from './components/Header.vue'
    import About from './components/About.vue'
-   import Service from './components/Service.vue';
-   import Skills from './components/Skills.vue';
+   // import Service from './components/Service.vue';
+   // import Skills from './components/Skills.vue';
    import { colorMode } from './stores/Mode';
    import { storeToRefs } from 'pinia';
    import { ref } from 'vue'
@@ -20,8 +20,8 @@
 <template>
    <Header />
    <div :class="{'bg-[#0e1217] text-[#D0D0D0]' : isDarkMode, 'bg-[#D0D0D0] text-[#0e1217]' : !isDarkMode}">
-   <div class="container pt-20 w-full" >
-      <section id="home" class="home ">
+   <div class="container pt-20 sm:w-full text-center sm:text-start" >
+      <section id="home" class="home">
          <div class="home-content">
             <h1 :class="{' text-[#D0D0D0]' : isDarkMode, ' text-[#0e1217]' : !isDarkMode}">
                 Hi!, I'm Peter John
@@ -42,17 +42,17 @@
                   Frontend developer, Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur culpa corrupti quasi praesentium ipsam, sunt quo cumque vero voluptatem mollitia!
                </p>
            
-               <div class="info-box my-3">
+               <div class="info-box my-3 flex items-center sm:items-start justify-center sm:justify-start">
                   <h5>Email:</h5>
                   <span class="font-bold tracking-wider">peterjeche442@gmail.com</span>
                </div>
 
-               <div class="btn-box flex justify-between mt-[1.5rem] w-[320px] h-[46px]">
-                  <a href="#" class="btn" :class="{' text-[yellow]' : isDarkMode, 'bg-[#D0D0D0] text-[#0e1217]' : !isDarkMode}">Download CV</a>
-                  <a href="#" class="btn" :class="{' text-[yellow]' : isDarkMode, 'bg-[#D0D0D0] text-[#0e1217]' : !isDarkMode}">Hire Me</a>
+               <div class="btn-box flex justify-between mt-[1.5rem] w-[320px] h-[46px] mx-auto sm:mx-0">
+                  <a href="#" class="btn" :class="{'  before:bg-[#D0D0D0] hover:text-[#0e1217] border border-[#d0d0d0]' : isDarkMode, 'bg-[#D0D0D0] text-[#0e1217] before:bg-[#0e1217] hover:text-[#d0d0d0] border border-[#0e1217]' : !isDarkMode}">Download CV</a>
+                  <a href="#" class="btn" :class="{'  before:bg-[#D0D0D0] hover:text-[#0e1217] border border-[#d0d0d0]' : isDarkMode, 'bg-[#D0D0D0] text-[#0e1217] before:bg-[#0e1217] hover:text-[#d0d0d0] border border-[#0e1217]' : !isDarkMode}">Hire Me</a>
                </div>
 
-               <div class="social-icon mt-[8rem]">
+               <div class="social-icon mt-[4rem]">
                   <a href="#" :class="{'bg-[#d0d0d0] before:bg-[blue] hover:text-[#d0d0d0] text-[blue]' : isDarkMode, ' bg-[blue] text-[#d0d0d0] before:bg-[#d0d0d0] hover:text-[blue]' : !isDarkMode}"><i class='bx bxl-facebook bx-tada '></i></a>
                   <a href="#" :class="{'bg-[#d0d0d0] text-[red] before:bg-[red] hover:text-[#d0d0d0]' : isDarkMode, ' bg-[red] text-[#d0d0d0] before:bg-[#d0d0d0] hover:text-[red]' : !isDarkMode}"><i class='bx bxl-instagram-alt bx-tada' ></i></a>
                   <a href="#" :class="{'bg-[#d0d0d0] text-[#37ac37] before:bg-[#37ac37] hover:text-[#d0d0d0]' : isDarkMode, ' bg-[#37ac37] text-[#d0d0d0] before:bg-[#d0d0d0] hover:text-[#37ac37]' : !isDarkMode}"><i class='bx bxl-upwork bx-tada' ></i></a>
@@ -154,17 +154,13 @@
    justify-content: center;
    align-items: center;
    column-gap: 2rem;
-   /* width: 400px; */
    height: 46px;
  }
  .btn-box a.btn{
     width: 200px; 
-    /* background-color: #01011a; */
-    border: 1px solid #d0d0d0;
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    /* color: var(--bg-color2); */
     height: 100%;
     font-weight: 700;
     letter-spacing: 1px;
@@ -174,11 +170,9 @@
     overflow: hidden;
     border-radius: 5px;
     z-index: 1;
-    /* color: yellow; */
  }
 
  .btn-box a.btn:hover{
-   color: #01011a;
    border: 1px solid transparent;
   }
 
@@ -189,7 +183,6 @@
    left: 0;
    width: 0;
    height: 100%;
-   background-color: yellow;
    z-index: -1;
    transition: .4s;
  }
@@ -265,5 +258,16 @@
 
  .liquid-shape-2{
    width: 80%;
+ }
+
+ @media screen and (max-width: 576px) {
+     .home{
+      display: flex;
+      flex-direction: column;
+      min-height: 20vh;
+      height: 100%;
+      width: auto;
+      gap: 0;
+     }
  }
 </style>

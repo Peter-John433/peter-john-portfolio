@@ -1,9 +1,16 @@
+<script setup>
+  import { storeToRefs } from 'pinia';
+  import { colorMode } from '@/stores/Mode';
+  const useModeStore = colorMode();
+  const { isDarkMode } = storeToRefs(useModeStore);
+</script>
+
 <template>
     <div>
-        <div id="skills" class="skills bg-[#01011a]">
-            <div class="main-text text-center text-[yellow] font-[900] tracking-wider">
-                <span class="text-center text-[2rem] text-[yellow] font-[900] tracking-wider">Technical and Profession</span>
-                <h2 class="text-center text-[2rem] text-[yellow] font-[900] tracking-wider">
+        <div id="skills" class="skills" :class="{'bg-[#D0D0D0] text-[#0e1217]' : isDarkMode, 'bg-[#0e1217] text-[#D0D0D0]' : !isDarkMode}">
+            <div class="main-text text-center font-[900] tracking-wider"  :class="{' text-[#0e1217]' : isDarkMode, 'text-[#D0D0D0]' : !isDarkMode}">
+                <span class="text-center text-[2rem] font-[900] tracking-wider">Technical and Profession</span>
+                <h2 class="text-center text-[2rem] font-[900] tracking-wider">
                     My Skills
                 </h2>
             </div>
@@ -17,8 +24,8 @@
                             <P>95%</P>
                         </div>
 
-                        <div class="bar">
-                            <span class="html"></span>
+                        <div class="bar" :class="{'bg-[#0e2117]' : isDarkMode, 'bg-[#d0d0d0]' : !isDarkMode}">
+                            <span class="html bg-green-500" ></span>
                         </div>
                     </div>
 
@@ -28,8 +35,8 @@
                             <P>90%</P>
                         </div>
 
-                        <div class="bar">
-                            <span class="css"></span>
+                        <div class="bar" :class="{'bg-[#0e2117]' : isDarkMode, 'bg-[#d0d0d0]' : !isDarkMode}">
+                            <span class="css bg-green-500" ></span>
                         </div>
                     </div>
 
@@ -39,8 +46,8 @@
                             <P>80%</P>
                         </div>
 
-                        <div class="bar">
-                            <span class="javascript"></span>
+                        <div class="bar" :class="{'bg-[#0e2117]' : isDarkMode, 'bg-[#d0d0d0]' : !isDarkMode}">
+                            <span class="javascript bg-green-500" ></span>
                         </div>
                     </div>
 
@@ -50,8 +57,8 @@
                             <P>70%</P>
                         </div>
 
-                        <div class="bar">
-                            <span class="vue-js"></span>
+                        <div class="bar" :class="{'bg-[#0e2117]' : isDarkMode, 'bg-[#d0d0d0]' : !isDarkMode}">
+                            <span class="vue-js bg-green-500" ></span>
                         </div>
                     </div>
 
@@ -61,8 +68,8 @@
                             <P>90%</P>
                         </div>
 
-                        <div class="bar">
-                            <span class="tailwind-css"></span>
+                        <div class="bar" :class="{'bg-[#0e2117]' : isDarkMode, 'bg-[#d0d0d0]' : !isDarkMode}">
+                            <span class="tailwind-css bg-green-500" ></span>
                         </div>
                     </div>
 
@@ -72,8 +79,8 @@
                             <P>90%</P>
                         </div>
 
-                        <div class="bar">
-                            <span class="bootstrap-css"></span>
+                        <div class="bar" :class="{'bg-[#0e2117]' : isDarkMode, 'bg-[#d0d0d0]' : !isDarkMode}">
+                            <span class="bootstrap-css bg-green-500" ></span>
                         </div>
                     </div>
 
@@ -83,8 +90,8 @@
                             <P>95%</P>
                         </div>
 
-                        <div class="bar">
-                            <span class="figma"></span>
+                        <div class="bar" :class="{'bg-[#0e2117]' : isDarkMode, 'bg-[#d0d0d0]' : !isDarkMode}">
+                            <span class="figma bg-green-500" ></span>
                         </div>
                     </div>
 
@@ -94,8 +101,8 @@
                             <P>97%</P>
                         </div>
 
-                        <div class="bar">
-                            <span class="git-github"></span>
+                        <div class="bar" :class="{'bg-[#0e2117]' : isDarkMode, 'bg-[#d0d0d0]' : !isDarkMode}">
+                            <span class="git-github bg-green-500" ></span>
                         </div>
                     </div>
                 </div>
@@ -118,7 +125,7 @@
 
 <style scoped>
     .skills{
-        box-shadow: 0 0 3px 2px rgba(255, 255, 0, .5);
+        /* box-shadow: 0 0 3px 2px rgba(255, 255, 0, .5); */
         border-radius: 12px;
         padding: 10px;
     }
@@ -150,7 +157,7 @@
    .skill-left .skill-bar .bar{
       width: 100%;
       height: 10px;
-      background-color: #010101;
+      /* background-color: #010101; */
       margin-top: 10px;
       border-radius: 25px;
       position: relative;
@@ -159,11 +166,11 @@
    .skill-left .skill-bar span{
       width: 50%;
       height: 100%;
-      background-color: yellow;
+      /* background-color: yellow; */
       position: absolute;
       left: 0%;
       border-radius: 25px;
-      box-shadow: 0 0 2px 2px #010101;
+      /* box-shadow: 0 0 2px 2px #010101; */
       animation: momo .6s linear ;
    }
 

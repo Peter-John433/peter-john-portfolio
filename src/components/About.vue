@@ -7,16 +7,16 @@
 
 <template>
    <div>
-        <div id="about" class="about rounded-xl mt-20 pb-10 flex justify-center items-center gap-x-20" :class="{'bg-[#D0D0D0] text-[#0e1217]' : isDarkMode, 'bg-[#0e1217] text-[#D0D0D0]' : !isDarkMode}">
+        <div id="about" class="about rounded-xl mt-20 pb-10 flex flex-col sm:flex-row justify-center items-center sm:gap-x-20" :class="{'bg-[#D0D0D0] text-[#0e1217]' : isDarkMode, 'bg-[#0e1217] text-[#D0D0D0]' : !isDarkMode}">
             <div class="img-about text-center relative rounded-full p-0 m-0 ">
-                <img src="@/assets/eche3-removebg-preview.png" class=" max-w-[300px] w-full  object-cover rounded-br-full rounded-bl-full border-x-1" :class="{'bg-[#0e1217] border-[#0e1217]' : isDarkMode, 'bg-[#d0d0d0] border-[#d0d0d0]' : !isDarkMode}" alt="">
+                <img src="@/assets/eche3-removebg-preview.png" class=" max-w-[300px] sm:w-full  object-cover rounded-br-full rounded-bl-full border-x-1" :class="{'bg-[#0e1217] border-[#0e1217]' : isDarkMode, 'bg-[#d0d0d0] border-[#d0d0d0]' : !isDarkMode}" alt="">
             
-                <div class="about-info info-1">
+                <div class="about-info info-1"  :class="{' border border-[#d0d0d0] bg-[#0e1217] text-[#d0d0d0]' : isDarkMode, 'bg-[#D0D0D0] text-[#0e1217] border border-[#0e1217]' : !isDarkMode}">
                     <span class="plus">5+</span>
                     <p class="mt-0">Years of experience</p>
                 </div>
 
-                <div class="about-info info-2">
+                <div class="about-info info-2"  :class="{' border border-[#d0d0d0] bg-[#0e1217] text-[#d0d0d0]' : isDarkMode, 'bg-[#D0D0D0] text-[#0e1217] border border-[#0e1217]' : !isDarkMode}">
                     <span class="plus">100+</span>
                     <p>projects completed</p>
                 </div>
@@ -30,7 +30,7 @@
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem quae amet nesciunt dolore quas eaque. Sunt possimus voluptatem ad saepe.
                 </p>
                 <div class="btn-box">
-                    <a href="#" class="btn" :class="{'bg-[#0e1217] before:bg-[#030314] hover:text-[#d0d0d0] text-[yellow] before:border-2 before:border-[#0e1217]' : isDarkMode, 'bg-[#0e1217] text-[#D0D0D0]' : !isDarkMode}">Read more <i class='bx bxs-chevron-right-circle text-[1.5rem] ms-3 bx-flashing'></i></a>
+                     <a href="#" class="btn"  :class="{'  before:bg-[#D0D0D0] hover:text-[#0e1217] border border-[#d0d0d0]' : !isDarkMode, 'bg-[#D0D0D0] text-[#0e1217] before:bg-[#0e1217] hover:text-[#d0d0d0] border border-[#0e1217]' : isDarkMode}">Read more <i class='bx bxs-chevron-right-circle text-[1.5rem] ms-3 bx-flashing'></i></a>
                 </div>
 
                 <!-- just like in the app.vue social-icon-box verse-versa -->
@@ -96,8 +96,8 @@
      justify-content: flex-start;
      align-items: flex-start;
      row-gap: 20px;
-     
   }
+
  .about-content span{
     font-size: 2.5rem;
     font-weight: 900;
@@ -154,25 +154,17 @@
 
   .info-1{
      position: absolute;
-     background-color: #0e1217;
      top: 40%;
      right: -15%;
-     color: yellow;
-     border: 5px double yellow;
-     /* box-shadow: 0 0 5px 5px #01011a; */
   }
 
   .info-2{
     position: absolute;
     bottom: 5%;
-    background-color: #0e1217;
-    color: yellow;
-    border: 5px double yellow;
   }
 
   .plus{
      font-size: 1.5rem;
-     color: #d0d0d0;
      font-weight: 700;
   }
 
@@ -189,6 +181,15 @@
     80%{
         border-radius: 40% 70% 30% 50% / 40% 40% 60% 30%;
     }
+
+ }
+ 
+ @media  screen and ( max-width: 576px ) {
+  .about-content{
+     font-size: 16px;
+     width: auto;
+    
+  }
  }
 
 </style>
