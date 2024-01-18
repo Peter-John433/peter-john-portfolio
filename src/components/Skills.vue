@@ -9,15 +9,15 @@
     <div>
         <div id="skills" class="skills" :class="{'bg-[#D0D0D0] text-[#0e1217]' : isDarkMode, 'bg-[#0e1217] text-[#D0D0D0]' : !isDarkMode}">
             <div class="main-text text-center font-[900] tracking-wider"  :class="{' text-[#0e1217]' : isDarkMode, 'text-[#D0D0D0]' : !isDarkMode}">
-                <span class="text-center text-[2rem] font-[900] tracking-wider">Technical and Profession</span>
-                <h2 class="text-center text-[2rem] font-[900] tracking-wider">
+                <span class="text-center text-[1.5rem] sm:text-[2rem] font-[900] tracking-wider">Technical and Profession</span>
+                <h2 class="text-center text-[1.5rem] sm:text-[2rem] font-[900] tracking-wider">
                     My Skills
                 </h2>
             </div>
 
             <div class="skill-main">
                 <div class="skill-left">
-                    <h3>Technical Skills</h3>
+                    <h3 class="mt-5 sm:mt-auto">Technical Skills</h3>
                     <div class="skill-bar">
                         <div class="info">
                             <p>HTML</p>
@@ -108,18 +108,59 @@
                 </div>
                 <div class="skill-right">
                     <h3>Profession</h3>
-                    <div>
-                        <h2>
-                            90%
-                        </h2>
+                    <div class="professional">
+                        <div class="box">
+                            <div class="circle">
+                                <div class="points" style="--i:1;"></div>
+                                <div class="points" style="--i:2;"></div>
+                                <div class="points" style="--i:3;"></div>
+                            </div>
+
+                            <div class="box-text">
+                                <big>90%</big>
+                                <small>Team work</small>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="circle">
+                                <div class="points" style="--i:1;"></div>
+                                <div class="points" style="--i:2;"></div>
+                                <div class="points" style="--i:3;"></div>
+                            </div>
+
+                            <div class="box-text">
+                                <big>90%</big>
+                                <small>Team work</small>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="circle">
+                                <div class="points" style="--i:1;"></div>
+                                <div class="points" style="--i:2;"></div>
+                                <div class="points" style="--i:3;"></div>
+                            </div>
+
+                            <div class="box-text">
+                                <big>90%</big>
+                                <small>Team work</small>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="circle">
+                                <div class="points" style="--i:1;"></div>
+                                <div class="points" style="--i:2;"></div>
+                                <div class="points" style="--i:3;"></div>
+                            </div>
+
+                            <div class="box-text">
+                                <big>90%</big>
+                                <small>Team work</small>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    <div :class="{'bg-[#0e1217] text-white' : isDarkMode, 'bg-[#f2f2f2] text-[black]' : !isDarkMode}">
-        hello
     </div>
 </template>
 
@@ -176,41 +217,179 @@
 
    .skill-left .skill-bar .html{
       width: 95%;
+      animation: html .6s linear ;
    }
 
    .skill-left .skill-bar .css{
       width: 90%;
+      animation: css .6s linear ;
    }
 
    .skill-left .skill-bar .javascript{
       width: 80%;
+      animation: javascript .6s linear ;
    }
 
    .skill-left .skill-bar .vue-js{
       width: 70%;
+      animation: vue .6s linear ;
    }
 
    .skill-left .skill-bar .tailwind-css{
       width: 89%;
+      animation: tailwind .6s linear ;
    }
 
    .skill-left .skill-bar .bootstrap-css{
       width: 89%;
+      animation: bootstrap .6s linear ;
    }
 
    .skill-left .skill-bar .figma{
       width: 95%;
+      animation: figma .6s linear ;
    }
 
    .skill-left .skill-bar .git-github{
       width: 97%;
+      animation: git .6s linear ;
    }
 
 
-   @keyframes momo {
+   @keyframes html {
       0% {
          width: 0%;
       }
-     
+
+      100%{
+         width: 95%;
+      } 
+   }
+
+   @keyframes css {
+      0% {
+         width: 0%;
+      }
+
+      100%{
+         width: 90%;
+      }
+   }
+
+   @keyframes javascript {
+      0% {
+         width: 0%;
+      }
+
+      100%{
+         width: 80%;
+      }
+   }
+
+   @keyframes vue {
+      0% {
+         width: 0%;
+      }
+
+      100%{
+         width: 70%;
+      }
+   }
+
+   @keyframes tailwin {
+      0% {
+         width: 0%;
+      }
+
+      100%{
+         width: 90%;
+      }
+   }
+
+   @keyframes bootstrap {
+      0% {
+         width: 0%;
+      }
+
+      100%{
+         width: 90%;
+      }
+   }
+
+   @keyframes figma {
+      0% {
+         width: 0%;
+      }
+
+      100%{
+         width: 95%;
+      }
+   }
+
+   @keyframes git {
+      0% {
+         width: 0%;
+      }
+
+      100%{
+         width: 95%;
+      }
+   }
+
+    /* skill-right */
+    .professional{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .box{
+        margin: 10px 0;
+        flex: 1 1 15rem;
+        position: relative;
+    }
+
+    .circle{
+        width: 100%;
+        height: 120px;
+        border: 2px solid red;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .box .box-text{
+        text-align: center;
+        font-size: 1rem;
+        color: green;
+
+    }
+
+    .box .box-text big{
+        position: absolute;
+        font-weight: 400;
+        letter-spacing: 1px;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .box .box-text small{
+        font-weight: 600;
+        display: block;
+    }
+
+    .circle .points{
+        background-color: red;
+        width: 2px;
+        height: 10px;
+        border-radius: 3px;
+        position: absolute;
+        transform: rotate(calc(var(--i)*120deg)) translateY(-45px);
+    }
+
+   @media screen and (max-width: 576px) {
+      .skill-main{
+        grid-template-columns: 1fr;
+        width: 100%;
+      }
    }
 </style>

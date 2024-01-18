@@ -9,13 +9,13 @@
      <div>
         <div id="service" class="service mt-20 mb-20">
             <div class="main-text text-center text-[2rem] font-[900] tracking-wider"  :class="{' text-[#D0D0D0]' : isDarkMode, ' text-[#0e1217]' : !isDarkMode}">
-                <span class="text-center text-[2.5rem] font-[900] tracking-wider">What i will do for you</span>
-                <h2 class="text-center text-[2.5rem] font-[900] tracking-wider">
+                <span class="text-center text-[1.5rem] sm:text-[2.5rem] font-[900] tracking-wider">What i will do for you</span>
+                <h2 class="text-center text-[1.5rem] sm:text-[2.5rem] font-[900] tracking-wider">
                     Our Service
                 </h2>
             </div>
 
-            <div class="section-service flex justify-center items-center mt-10 gap-x-10">
+            <div class="section-service flex flex-col sm:flex-row justify-center items-center mt-10 gap-y-10 sm:gap-x-10">
                 <div class="service-icon-cont flex flex-col justify-between items-center text-center p-5 rounded-xl gap-y-1"  :class="{'bg-[#D0D0D0] text-[#0e1217]' : isDarkMode, 'bg-[#0e1217] text-[#D0D0D0]' : !isDarkMode}">
                     <i class='bx bx-layer service-icon'  :class="{'text-[#0e1217] shadow-sm shadow-[#0e1217] border-4 border-[#d0d0d0]' : isDarkMode, 'text-[#D0D0D0] shadow-sm shadow-[#d0d0d0] border-4 border-[#0e1217]' : !isDarkMode}"></i>
                     <h3 class="text-[1.5rem]">
