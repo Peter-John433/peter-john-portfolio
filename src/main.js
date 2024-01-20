@@ -11,3 +11,9 @@ app.use(createPinia())
 app.use(router)
 
 app.mount('#app')
+
+
+// menuli
+
+let menuli = document.querySelectorAll('header ul li a ');
+console.log(menuli)

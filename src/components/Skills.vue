@@ -22,7 +22,7 @@
 
 <template>
     <div>
-        <div id="skills" class="skills" :class="{'bg-[#D0D0D0] text-[#0e1217]' : isDarkMode, 'bg-[#0e1217] text-[#D0D0D0]' : !isDarkMode}">
+        <div id="skills" class="skills scroll-smooth" :class="{'bg-[#D0D0D0] text-[#0e1217]' : isDarkMode, 'bg-[#0e1217] text-[#D0D0D0]' : !isDarkMode}">
             <div class="main-text text-center font-[900] tracking-wider"  :class="{' text-[#0e1217]' : isDarkMode, 'text-[#D0D0D0]' : !isDarkMode}">
                 <span class="text-center text-[1.5rem] sm:text-[2rem] font-[900] tracking-wider">Technical and Profession</span>
                 <h2 class="text-center text-[1.5rem] sm:text-[2rem] font-[900] tracking-wider">

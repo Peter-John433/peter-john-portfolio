@@ -3,11 +3,11 @@
 </script>
 
 <template>
-    <div id="footer" class="footer pt-10">
-        <div>
-            <p>Copyright &copy; 2024 by PETER JOHN || All right reserved.</p>
-            <a href="#"></a>
-        </div>
+    <div id="footer" class="footer">
+        <footer>
+                <p>Copyright &copy; 2024 by PETER JOHN || All right reserved.</p>
+                <a href="#"><i class='bx bx-up-arrow-alt' ></i></a>
+        </footer>
     </div>
 </template>
 
@@ -16,7 +16,15 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1.5rem 10%;
+      padding: 1.5rem;
+      background-color: #d0d0d0;
+      
+   }
+
+   footer a{
+      color: black;
+      font-weight: 900;
+      font-size: 1.5rem;
    }
 
 </style>

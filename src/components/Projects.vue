@@ -3,7 +3,7 @@
 </script>
 
 <template>
-   <div class="pt-20">
+   <div id="portfolio" class="pt-20">
         <div class="main-text text-center font-[900] tracking-wider"  :class="{' text-[#0e1217]' : isDarkMode, 'text-[#D0D0D0]' : !isDarkMode}">
             <span class="text-center text-[1.5rem] sm:text-[2rem] font-[900] tracking-wider">What i will do for you</span>
                 <h2 class="text-center text-[1.5rem] sm:text-[2rem] font-[900] tracking-wider">

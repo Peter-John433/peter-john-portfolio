@@ -31,12 +31,12 @@
 
            
                <ul class="block sm:flex  font-[500] header-list">
-                 <a href=""><li>Home</li></a>
-                 <a href=""><li>About</li></a>
-                 <a href=""><li>Services</li></a>
-                 <a href=""><li>Portfolio</li></a>
-                 <a href=""><li>Contact</li></a>
-                 <a href=""><li>Skills</li></a>
+                 <a href="#home"><li>Home</li></a>
+                 <a href="#about"><li>About</li></a>
+                 <a href="#service"><li>Services</li></a>
+                 <a href="#portfolio"><li>Portfolio</li></a>
+                 <a href="#skills"><li>Skills</li></a>
+                 <a href="#contact"><li>Contact</li></a>
                </ul>
           
            <div class="text-[2rem] mr-[16px] text-[yellow] block sm:hidden">

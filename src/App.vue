@@ -22,9 +22,9 @@
 
 <template>
    <Header />
-   <div>
+   <div class=" scroll-smooth">
       <div class="px-3" :class="{'bg-[#0e1217] text-[#D0D0D0]' : isDarkMode, 'bg-[#D0D0D0] text-[#0e1217]' : !isDarkMode}">
-      <div class="container mx-auto pt-20  sm:w-full text-center sm:text-start" >
+      <div class="container mx-auto py-20   sm:w-full text-center sm:text-start" >
          <section id="home" class="home">
             <div class="home-content">
                <h1 :class="{' text-[#D0D0D0]' : isDarkMode, ' text-[#0e1217]' : !isDarkMode}">
