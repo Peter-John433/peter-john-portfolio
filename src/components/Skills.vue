@@ -3,6 +3,21 @@
   import { colorMode } from '@/stores/Mode';
   const useModeStore = colorMode();
   const { isDarkMode } = storeToRefs(useModeStore);
+  import { ref } from 'vue';
+
+//   const circle = document.querySelector('.circle');
+//     circle.forEach(elem=>{
+//     let dots = elem.getAttribute('data-dots');
+//     let marked = elem.getAttribute('data-percent');
+//     let percent = Math.floor(dots*marked/100);
+//     let point = '';
+//     let rotate = 360 / dots;
+
+//     for(let i = 0; i < dots.length; i++) {
+//         point += <div class="points" style='--i:${i}; --rot:${rotate}deg'></div>
+//     }
+//     elem.innerHTML = point
+// })
 </script>
 
 <template>
@@ -107,58 +122,128 @@
                     </div>
                 </div>
                 <div class="skill-right">
+                    <h3 class="mt-5 sm:mt-auto">Technical Skills</h3>
+                    <div class="skill-bar">
+                        <div class="info">
+                            <p>HTML</p>
+                            <P>95%</P>
+                        </div>
+
+                        <div class="bar" :class="{'bg-[#0e2117]' : isDarkMode, 'bg-[#d0d0d0]' : !isDarkMode}">
+                            <span class="html bg-green-500" ></span>
+                        </div>
+                    </div>
+
+                    <div class="skill-bar">
+                        <div class="info">
+                            <p>CSS</p>
+                            <P>90%</P>
+                        </div>
+
+                        <div class="bar" :class="{'bg-[#0e2117]' : isDarkMode, 'bg-[#d0d0d0]' : !isDarkMode}">
+                            <span class="css bg-green-500" ></span>
+                        </div>
+                    </div>
+
+                    <div class="skill-bar">
+                        <div class="info">
+                            <p>JAVASCRIPT</p>
+                            <P>80%</P>
+                        </div>
+
+                        <div class="bar" :class="{'bg-[#0e2117]' : isDarkMode, 'bg-[#d0d0d0]' : !isDarkMode}">
+                            <span class="javascript bg-green-500" ></span>
+                        </div>
+                    </div>
+
+                    <div class="skill-bar">
+                        <div class="info">
+                            <p>VUE JS</p>
+                            <P>70%</P>
+                        </div>
+
+                        <div class="bar" :class="{'bg-[#0e2117]' : isDarkMode, 'bg-[#d0d0d0]' : !isDarkMode}">
+                            <span class="vue-js bg-green-500" ></span>
+                        </div>
+                    </div>
+
+                    <div class="skill-bar">
+                        <div class="info">
+                            <p>TAILWIND CSS</p>
+                            <P>90%</P>
+                        </div>
+
+                        <div class="bar" :class="{'bg-[#0e2117]' : isDarkMode, 'bg-[#d0d0d0]' : !isDarkMode}">
+                            <span class="tailwind-css bg-green-500" ></span>
+                        </div>
+                    </div>
+
+                    <div class="skill-bar">
+                        <div class="info">
+                            <p>BOOTSTRAP CSS</p>
+                            <P>90%</P>
+                        </div>
+
+                        <div class="bar" :class="{'bg-[#0e2117]' : isDarkMode, 'bg-[#d0d0d0]' : !isDarkMode}">
+                            <span class="bootstrap-css bg-green-500" ></span>
+                        </div>
+                    </div>
+
+                    <div class="skill-bar">
+                        <div class="info">
+                            <p>FIGMA</p>
+                            <P>95%</P>
+                        </div>
+
+                        <div class="bar" :class="{'bg-[#0e2117]' : isDarkMode, 'bg-[#d0d0d0]' : !isDarkMode}">
+                            <span class="figma bg-green-500" ></span>
+                        </div>
+                    </div>
+
+                    <div class="skill-bar">
+                        <div class="info">
+                            <p>GIT AND GITHUB</p>
+                            <P>97%</P>
+                        </div>
+
+                        <div class="bar" :class="{'bg-[#0e2117]' : isDarkMode, 'bg-[#d0d0d0]' : !isDarkMode}">
+                            <span class="git-github bg-green-500" ></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="skill-right">
                     <h3>Profession</h3>
                     <div class="professional">
                         <div class="box">
-                            <div class="circle">
-                                <div class="points" style="--i:1;"></div>
-                                <div class="points" style="--i:2;"></div>
-                                <div class="points" style="--i:3;"></div>
-                            </div>
-
+                            <div class="circle" data-dots="80" data-percent="90"></div>
                             <div class="box-text">
                                 <big>90%</big>
                                 <small>Team work</small>
                             </div>
                         </div>
                         <div class="box">
-                            <div class="circle">
-                                <div class="points" style="--i:1;"></div>
-                                <div class="points" style="--i:2;"></div>
-                                <div class="points" style="--i:3;"></div>
-                            </div>
-
+                            <div class="circle" data-dots="80" data-percent="90"></div>
                             <div class="box-text">
                                 <big>90%</big>
                                 <small>Team work</small>
                             </div>
                         </div>
                         <div class="box">
-                            <div class="circle">
-                                <div class="points" style="--i:1;"></div>
-                                <div class="points" style="--i:2;"></div>
-                                <div class="points" style="--i:3;"></div>
-                            </div>
-
+                            <div class="circle" data-dots="80" data-percent="90"></div>
                             <div class="box-text">
                                 <big>90%</big>
                                 <small>Team work</small>
                             </div>
                         </div>
                         <div class="box">
-                            <div class="circle">
-                                <div class="points" style="--i:1;"></div>
-                                <div class="points" style="--i:2;"></div>
-                                <div class="points" style="--i:3;"></div>
-                            </div>
-
+                            <div class="circle" data-dots="80" data-percent="90"></div>
                             <div class="box-text">
                                 <big>90%</big>
                                 <small>Team work</small>
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -255,6 +340,73 @@
       animation: git .6s linear ;
    }
 
+   /* skill right */
+   .skill-right .skill-bar .info{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 10px;
+   }
+
+   .skill-right .skill-bar .bar{
+      width: 100%;
+      height: 10px;
+      /* background-color: #010101; */
+      margin-top: 10px;
+      border-radius: 25px;
+      position: relative;
+   }
+
+   .skill-right .skill-bar span{
+      width: 50%;
+      height: 100%;
+      /* background-color: yellow; */
+      position: absolute;
+      left: 0%;
+      border-radius: 25px;
+      /* box-shadow: 0 0 2px 2px #010101; */
+      animation: momo .6s linear ;
+   }
+
+   .skill-right .skill-bar .html{
+      width: 95%;
+      animation: html .6s linear ;
+   }
+
+   .skill-right .skill-bar .css{
+      width: 90%;
+      animation: css .6s linear ;
+   }
+
+   .skill-right .skill-bar .javascript{
+      width: 80%;
+      animation: javascript .6s linear ;
+   }
+
+   .skill-right .skill-bar .vue-js{
+      width: 70%;
+      animation: vue .6s linear ;
+   }
+
+   .skill-right .skill-bar .tailwind-css{
+      width: 89%;
+      animation: tailwind .6s linear ;
+   }
+
+   .skill-right .skill-bar .bootstrap-css{
+      width: 89%;
+      animation: bootstrap .6s linear ;
+   }
+
+   .skill-right .skill-bar .figma{
+      width: 95%;
+      animation: figma .6s linear ;
+   }
+
+   .skill-right .skill-bar .git-github{
+      width: 97%;
+      animation: git .6s linear ;
+   }
 
    @keyframes html {
       0% {
@@ -337,7 +489,7 @@
    }
 
     /* skill-right */
-    .professional{
+    /* .professional{
         display: grid;
         grid-template-columns: repeat(2,1fr);
     }
@@ -354,6 +506,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        position: relative;
     }
 
     .box .box-text{
@@ -383,8 +536,17 @@
         height: 10px;
         border-radius: 3px;
         position: absolute;
-        transform: rotate(calc(var(--i)*120deg)) translateY(-45px);
+        transform: rotate(calc(var(--i)*var(--rot))) translateY(-45px);
+        animation: glow .6s linear forwards;
+        animation-delay: calc(green * 0.5s);
     }
+
+    @keyframes  glow {
+        0%{
+            background-color: black;
+            box-shadow: 0 0 5px 7px yellow;
+        }
+    } */
 
    @media screen and (max-width: 576px) {
       .skill-main{

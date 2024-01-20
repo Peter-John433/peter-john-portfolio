@@ -1,0 +1,170 @@
+<script setup lang="ts">
+
+</script>
+
+<template>
+   <div class="pt-20">
+        <div class="main-text text-center font-[900] tracking-wider"  :class="{' text-[#0e1217]' : isDarkMode, 'text-[#D0D0D0]' : !isDarkMode}">
+            <span class="text-center text-[1.5rem] sm:text-[2rem] font-[900] tracking-wider">What i will do for you</span>
+                <h2 class="text-center text-[1.5rem] sm:text-[2rem] font-[900] tracking-wider">
+                    My Projects
+                </h2>
+        </div>
+
+        <div class="portfolio-gallery mt-5">
+            <div class="port-box">
+                <div class="port-img">
+                    <img src="@/assets/laptop2.png" alt="">
+                </div>
+                <div class="port-content">
+                    <h3>Graphic Design</h3>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi magni doloremque minus odio alias ipsum accusantium animi temporibus numquam tempore.
+                    </p>
+                    <a href="#"><i class='bx bx-link-external' ></i></a>
+                </div>
+            </div>
+            <div class="port-box">
+                <div class="port-img">
+                    <img src="@/assets/laptop2.png" alt="">
+                </div>
+                <div class="port-content">
+                    <h3>Graphic Design</h3>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi magni doloremque minus odio alias ipsum accusantium animi temporibus numquam tempore.
+                    </p>
+                    <a href="#"><i class='bx bx-link-external' ></i></a>
+                </div>
+            </div>
+            <div class="port-box">
+                <div class="port-img">
+                    <img src="@/assets/laptop2.png" alt="">
+                </div>
+                <div class="port-content">
+                    <h3>Graphic Design</h3>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi magni doloremque minus odio alias ipsum accusantium animi temporibus numquam tempore.
+                    </p>
+                    <a href="#"><i class='bx bx-link-external' ></i></a>
+                </div>
+            </div>
+
+            <div class="port-box">
+                <div class="port-img">
+                    <img src="@/assets/laptop2.png" alt="">
+                </div>
+                <div class="port-content">
+                    <h3>Graphic Design</h3>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi magni doloremque minus odio alias ipsum accusantium animi temporibus numquam tempore.
+                    </p>
+                    <a href="#"><i class='bx bx-link-external' ></i></a>
+                </div>
+            </div>
+
+            <div class="port-box">
+                <div class="port-img">
+                    <img src="@/assets/laptop2.png" alt="">
+                </div>
+                <div class="port-content">
+                    <h3>Graphic Design</h3>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi magni doloremque minus odio alias ipsum accusantium animi temporibus numquam tempore.
+                    </p>
+                    <a href="#"><i class='bx bx-link-external' ></i></a>
+                </div>
+            </div>
+
+            <div class="port-box">
+                <div class="port-img">
+                    <img src="@/assets/laptop2.png" alt="">
+                </div>
+                <div class="port-content">
+                    <h3>Graphic Design</h3>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi magni doloremque minus odio alias ipsum accusantium animi temporibus numquam tempore.
+                    </p>
+                    <a href="#"><i class='bx bx-link-external' ></i></a>
+                </div>
+            </div> 
+        </div>
+   </div>
+</template>
+
+<style scoped>
+   
+   .portfolio-gallery{
+       display: grid;
+       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+       gap: 2rem;
+   }
+
+   .port-box{
+      border-radius: 16px;
+      box-shadow: 0 0 4px 5px white;
+      overflow: hidden;
+      background-color: yellow;
+      display: flex;
+      align-items: center;
+      border: 2px solid red;
+      position: relative;
+   }
+
+   .port-img{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+   }
+   
+   .port-img img{
+      width: 100%;
+      opacity: .5s;
+      height: 100%;
+      transition: .5s;
+   }
+   .port-box:hover .port-content{
+      opacity: 1;
+   }
+    .port-box:hover  .port-img img{
+      transform: scale(1.1);
+    }
+   .port-content{
+      position: absolute;
+      bottom: 0%;
+      left: 0%;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      background: linear-gradient(rgba(0, 0, 0, .2), yellow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: .5s;
+      flex-direction: column;
+      padding: 0 .2rem;
+   }
+
+    .port-content h3{
+        font-size: 1.5rem;
+        color: red;
+    }
+   .port-content p{
+      font-size: 13px;
+      text-align: center;
+   }
+
+   .port-content a{
+      background-color: white;
+      color: black;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 100%;
+      border: 1px solid red;
+      outline: 1px solid white;
+   }
+</style>

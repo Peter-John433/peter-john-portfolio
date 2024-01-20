@@ -1,8 +1,11 @@
 <script setup>
-   // import Header from './components/Header.vue'
-   // import About from './components/About.vue'
-   // import Service from './components/Service.vue';
+   import Header from './components/Header.vue'
+   import About from './components/About.vue'
+   import Service from './components/Service.vue';
    import Skills from './components/Skills.vue';
+   import Projects from '@/components/Projects.vue';
+   import Contact from '@/components/Contact.vue';
+   import Footer from '@/components/Footer.vue'
    import { colorMode } from './stores/Mode';
    import { storeToRefs } from 'pinia';
    import { ref } from 'vue'
@@ -22,7 +25,7 @@
    <div>
       <div class="px-3" :class="{'bg-[#0e1217] text-[#D0D0D0]' : isDarkMode, 'bg-[#D0D0D0] text-[#0e1217]' : !isDarkMode}">
       <div class="container mx-auto pt-20  sm:w-full text-center sm:text-start" >
-         <!-- <section id="home" class="home">
+         <section id="home" class="home">
             <div class="home-content">
                <h1 :class="{' text-[#D0D0D0]' : isDarkMode, ' text-[#0e1217]' : !isDarkMode}">
                   Hi!, I'm Peter John
@@ -107,16 +110,21 @@
                   </svg>
                </div>
             </div>
-         </section> -->
+         </section>
 
          <About />
 
          <Service />
 
          <Skills />
+
+         <Projects />
+
+         <Contact />
       </div>
       </div>
    </div>
+   <Footer />
 </template>
 
 <style scoped>
