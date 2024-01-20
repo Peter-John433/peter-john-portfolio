@@ -7,7 +7,7 @@
 
 <template>
    <div>
-        <div id="about" class="about overflow-hidden sm:rounded-xl mt-20 pb-10 flex flex-col sm:flex-row justify-center items-center sm:gap-x-20" :class="{'bg-[#D0D0D0] text-[#0e1217]' : isDarkMode, 'bg-[#0e1217] text-[#D0D0D0]' : !isDarkMode}">
+        <div id="about" class="about scroll-scale overflow-hidden sm:rounded-xl mt-20 flex flex-col sm:flex-row justify-center items-center sm:gap-x-20" :class="{'bg-[#D0D0D0] text-[#0e1217]' : isDarkMode, 'bg-[#0e1217] text-[#D0D0D0]' : !isDarkMode}">
             <div class="img-about text-center relative rounded-full p-0 m-0 ">
                 <img src="@/assets/eche3-removebg-preview.png" class=" max-w-[300px] sm:w-full  object-cover rounded-br-full rounded-bl-full border-x-1" :class="{'bg-[#0e1217] border-[#0e1217]' : isDarkMode, 'bg-[#d0d0d0] border-[#d0d0d0]' : !isDarkMode}" alt="">
             
@@ -183,7 +183,8 @@
     }
 
  }
- 
+
+  
  @media  screen and ( max-width: 576px ) {
   .about-content{
      font-size: 16px;

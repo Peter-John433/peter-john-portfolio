@@ -26,7 +26,7 @@
       <div class="px-3" :class="{'bg-[#0e1217] text-[#D0D0D0]' : isDarkMode, 'bg-[#D0D0D0] text-[#0e1217]' : !isDarkMode}">
       <div class="container mx-auto py-20   sm:w-full text-center sm:text-start" >
          <section id="home" class="home">
-            <div class="home-content">
+            <div class="home-content scroll-scale">
                <h1 :class="{' text-[#D0D0D0]' : isDarkMode, ' text-[#0e1217]' : !isDarkMode}">
                   Hi!, I'm Peter John
                </h1>
@@ -65,7 +65,7 @@
                   </div>
             </div>
 
-            <div class="home-img relative">
+            <div class="home-img relative scroll-scale">
                <div class="img-box">
                   <img src="@/assets/eche3-removebg-preview.png" alt="">
                </div>
@@ -270,6 +270,7 @@
    width: 80%;
  }
 
+ 
  @media screen and (max-width: 576px) {
      .home{
       display: flex;

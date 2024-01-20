@@ -24,7 +24,7 @@
 
 <template>
     <div class="gen-container w-full fixed z-10" :class="{'bg-[#D0D0D0] text-[#01010a]' : isDarkMode, 'bg-[#0e1217] text-[#D0D0D0]' : !isDarkMode}">
-       <header class="flex justify-between items-center container ">
+        <header class="flex justify-between items-center container ">
            <div class="header-logo text-[26px] font-[700] font-sans ">
                <span class="j-logo font-[700]">J</span>ohn
            </div>
@@ -39,7 +39,7 @@
                  <a href="#contact"><li>Contact</li></a>
                </ul>
           
-           <div class="text-[2rem] mr-[16px] text-[yellow] block sm:hidden">
+           <div id="menu-icon" class="text-[2rem] mr-[16px] text-[yellow] block sm:hidden">
             <i class='bx bx-menu'></i>
            </div>
 
@@ -77,6 +77,52 @@
     0 0 70px rgba(255, 255, 0),
     0 0 100px rgba(255, 255, 0),
     0 0 150px rgba(255, 255, 0); */
+  }
 
+  @media screen and (min-width: 756px) and (max-width: 992)  {
+  
+}
+
+  @media screen and (max-width: 576px){
+    #toggleBtn{
+      display: none;
+    }
+    #menu-icon{
+       display: block;
+       transition: all 0.4s ease;
+       position: absolute;
+       right: 0%;
+    }
+    #menu-icon.bx-x{
+      transform: rotate(-180deg);
+    }
+    header{
+       position: relative;
+       /* padding: auto 1rem; */
+       /* display: block; */
+       /* transition: all .4s ease; */
+    }
+     .header-list{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        background-color: green;
+        top: -1000px;
+        left: 0%;
+        right: 0%;
+        text-align: left;
+        padding: 0 5%;
+        transition: all 0.45s ease;
+     } 
+
+     .header-list a{
+        display: block;
+        font-size: 1rem;
+        padding-bottom: 1rem;
+     }
+
+    .header-list.open{
+       top: 100%;
+     }
   }
 </style>
