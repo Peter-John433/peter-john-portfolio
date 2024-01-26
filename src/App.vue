@@ -26,22 +26,22 @@
       <div class="container mx-auto py-20   sm:w-full text-center sm:text-start" >
          <section id="home" class="home">
             <div class="home-content scroll-scale">
-               <h1 :class="{' text-[#D0D0D0]' : isDarkMode, ' text-[#0e1217]' : !isDarkMode}">
+               <h1 :class="{' text-white' : isDarkMode, ' text-black' : !isDarkMode}">
                   Hi!, I'm Peter John
                </h1>
 
                <div class="change-text inline-flex m-0">
-                  <h3 class="font-[600] text-[1.5rem] me-3 text-[#D0D0D0]">
+                  <h3 class="font-[600] text-[1.5rem] me-3 text-white">
                      
                   </h3>
 
-                  <h3  class="font-[600] text-[1.5rem]">
+                  <h3  class="font-[600] text-[1.5rem]" :class="{' text-white' : isDarkMode, 'text-black' : !isDarkMode}">
                      <span class="word">Frontend developer</span>
                      <span class="word">Web designer</span>
                   </h3>
                </div>
 
-                  <p class=" leading-6 text-[18px]" :class="{' text-[yellow]' : isDarkMode, 'bg-[#D0D0D0] text-[#0e1217]' : !isDarkMode}">
+                  <p class=" leading-6 text-[18px]" :class="{'text-white' : isDarkMode, ' text-black' : !isDarkMode}">
                      Frontend developer, Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur culpa corrupti quasi praesentium ipsam, sunt quo cumque vero voluptatem mollitia!
                   </p>
             
@@ -51,16 +51,16 @@
                   </div>
 
                   <div class="btn-box flex justify-between mt-[1.5rem] w-[320px] h-[46px] mx-auto sm:mx-0">
-                     <a href="#" class="btn" :class="{'  before:bg-[#D0D0D0] hover:text-[#0e1217] border border-[#d0d0d0]' : isDarkMode, 'bg-[#D0D0D0] text-[#0e1217] before:bg-[#0e1217] hover:text-[#d0d0d0] border border-[#0e1217]' : !isDarkMode}">Download CV</a>
-                     <a href="#" class="btn" :class="{'  before:bg-[#D0D0D0] hover:text-[#0e1217] border border-[#d0d0d0]' : isDarkMode, 'bg-[#D0D0D0] text-[#0e1217] before:bg-[#0e1217] hover:text-[#d0d0d0] border border-[#0e1217]' : !isDarkMode}">Hire Me</a>
+                     <a href="#" class="btn" :class="{' text-[#37ac37]  before:bg-[#37ac37] hover:text-white border border-[#37ac37]' : !isDarkMode, 'bg-[#D0D0D0] text-black before:bg-[#37ac37] hover:text-white border border-black' : isDarkMode}">Download CV</a>
+                     <a href="#" class="btn" :class="{' text-[#37ac37]  before:bg-[#37ac37] hover:text-white border border-[#37ac37]' : !isDarkMode, 'bg-[#D0D0D0] text-black before:bg-[#37ac37] hover:text-white border border-black' : isDarkMode}">Hire Me</a>
                   </div>
 
-                  <div class="social-icon mt-[4rem]">
-                     <a href="#" :class="{'bg-[#d0d0d0] before:bg-[blue] hover:text-[#d0d0d0] text-[blue]' : isDarkMode, ' bg-[blue] text-[#d0d0d0] before:bg-[#d0d0d0] hover:text-[blue]' : !isDarkMode}"><i class='bx bxl-facebook bx-tada '></i></a>
-                     <a href="#" :class="{'bg-[#d0d0d0] text-[red] before:bg-[red] hover:text-[#d0d0d0]' : isDarkMode, ' bg-[red] text-[#d0d0d0] before:bg-[#d0d0d0] hover:text-[red]' : !isDarkMode}"><i class='bx bxl-instagram-alt bx-tada' ></i></a>
-                     <a href="#" :class="{'bg-[#d0d0d0] text-[#37ac37] before:bg-[#37ac37] hover:text-[#d0d0d0]' : isDarkMode, ' bg-[#37ac37] text-[#d0d0d0] before:bg-[#d0d0d0] hover:text-[#37ac37]' : !isDarkMode}"><i class='bx bxl-upwork bx-tada' ></i></a>
-                     <a href="#" :class="{'bg-[#d0d0d0] text-blue-700 before:bg-blue-700 hover:text-[#d0d0d0]' : isDarkMode, ' bg-blue-700 text-[#d0d0d0] before:bg-[#d0d0d0] hover:text-blue-700' : !isDarkMode}"><i class='bx bxl-linkedin bx-tada' ></i></a>
-                     <a href="#" :class="{'bg-[#d0d0d0] text-blue-500 before:bg-blue-500 hover:text-[#d0d0d0]' : isDarkMode, ' bg-blue-500 text-[#d0d0d0] before:bg-[#d0d0d0] hover:text-blue-500' : !isDarkMode}"><i class='bx bxl-twitter bx-tada' ></i></a>
+                  <div class="social-icon mt-[2rem] mx-auto  sm:mx-0">
+                     <a href="#" :class="{'bg-[#f1f1f1] shadow-md  before:bg-[blue] hover:text-white text-[blue]' : isDarkMode, 'shadow-md bg-[blue] text-white before:bg-white hover:text-[blue]' : !isDarkMode}"><i class='bx bxl-facebook'></i></a>
+                     <a href="#" :class="{'bg-[#f1f1f1] shadow-md text-[red] before:bg-[red] hover:text-white' : isDarkMode, 'shadow-md bg-[red] text-white before:bg-white hover:text-[red]' : !isDarkMode}"><i class='bx bxl-instagram-alt'></i></a>
+                     <a href="#" :class="{'bg-[#f1f1f1] shadow-md text-[#37ac37] before:bg-[#37ac37] hover:text-white' : isDarkMode, 'shadow-md bg-[#37ac37] text-white before:bg-white hover:text-[#37ac37]' : !isDarkMode}"><i class='bx bxl-upwork'></i></a>
+                     <a href="#" :class="{'bg-[#f1f1f1] shadow-md text-blue-700 before:bg-blue-700 hover:text-white' : isDarkMode, 'shadow-md bg-blue-700 text-white before:bg-white hover:text-blue-700' : !isDarkMode}"><i class='bx bxl-linkedin'></i></a>
+                     <a href="#" :class="{'bg-[#f1f1f1] shadow-md text-blue-500 before:bg-blue-500 hover:text-white' : isDarkMode, 'shadow-md bg-blue-500 text-white before:bg-white hover:text-blue-500' : !isDarkMode}"><i class='bx bxl-twitter'></i></a>
                   </div>
             </div>
 

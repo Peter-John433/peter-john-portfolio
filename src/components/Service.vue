@@ -16,7 +16,7 @@
             </div>
 
             <div class="section-service flex flex-col sm:flex-row justify-center items-center mt-10 gap-y-10 sm:gap-x-10">
-                <div class="service-icon-cont flex flex-col justify-between items-center text-center p-5 rounded-xl gap-y-1"  :class="{'bg-white text-black' : isDarkMode, 'bg-black text-white' : !isDarkMode}">
+                <div class="service-icon-cont scroll-scale flex flex-col justify-between items-center text-center p-5 rounded-xl gap-y-1"  :class="{'bg-white text-black' : isDarkMode, 'bg-black text-white' : !isDarkMode}">
                     <i class='bx bx-layer service-icon'  :class="{'text-black shadow-sm shadow-black border-4 border-black' : isDarkMode, 'text-white shadow-sm shadow-white border-4 border-black' : !isDarkMode}"></i>
                     <h3 class="text-[1.5rem]">
                         Frontend Developer
@@ -31,7 +31,7 @@
                     </div>
                 </div>
 
-                <div class="service-icon-cont flex flex-col justify-between items-center text-center p-5 rounded-xl gap-y-1" :class="{'bg-white text-black' : isDarkMode, 'bg-black text-white' : !isDarkMode}">
+                <div class="service-icon-cont scroll-scale flex flex-col justify-between items-center text-center p-5 rounded-xl gap-y-1" :class="{'bg-white text-black' : isDarkMode, 'bg-black text-white' : !isDarkMode}">
                     <i class='bx bx-desktop service-icon' :class="{'text-black shadow-sm shadow-black border-4 border-black' : isDarkMode, 'text-white shadow-sm shadow-white border-4 border-black' : !isDarkMode}"></i>
                     <h3 class="text-[1.5rem]">
                         Web designer
@@ -46,7 +46,7 @@
                     </div>
                 </div>
 
-                <div class="service-icon-cont flex flex-col justify-between gap-y-1 items-center text-center p-5 rounded-xl" :class="{'bg-white text-black' : isDarkMode, 'bg-black text-white' : !isDarkMode}">
+                <div class="service-icon-cont scroll-scale flex flex-col justify-between gap-y-1 items-center text-center p-5 rounded-xl" :class="{'bg-white text-black' : isDarkMode, 'bg-black text-white' : !isDarkMode}">
                     <i class='bx bx-code-alt service-icon' :class="{'text-black shadow-sm shadow-black border-4 border-black' : isDarkMode, 'text-white shadow-sm shadow-white border-4 border-black' : !isDarkMode}"></i>
                     <h3 class="text-[1.5rem]">
                         Frontend Developer

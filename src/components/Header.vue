@@ -35,7 +35,7 @@
                  <a href="#contact" :class="{'hover:bg-black hover:text-white' : isDarkMode, 'hover:text-black hover:bg-white' : !isDarkMode}"><li>Contact</li></a>
                </ul>
           
-           <div id="menu-icon" class="text-[2rem] mr-[16px] text-[yellow] block sm:hidden">
+           <div id="menu-icon" class="text-[2rem] mr-[16px] block sm:hidden" :class="{'text-black' : isDarkMode, 'text-white' : !isDarkMode}">
             <i class='bx bx-menu'></i>
            </div>
 

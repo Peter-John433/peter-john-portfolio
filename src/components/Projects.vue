@@ -15,7 +15,7 @@
         </div>
 
         <div class="portfolio-gallery mt-10">
-            <div class="port-box rounded-[16px] shadow-md overflow-hidden flex items-center border-2 relative" :class="{'border-white': isDarkMode, 'border-black' : !isDarkMode}">
+            <div class="port-box scroll-scale rounded-[16px] shadow-md overflow-hidden flex items-center border-2 relative" :class="{'border-white': isDarkMode, 'border-black' : !isDarkMode}">
                 <div class="port-img flex justify-center items-center w-[100%] h-[100%]">
                     <img src="@/assets/laptop2.png" alt="">
                 </div>
@@ -27,7 +27,7 @@
                     <a href="#"><i class='bx bx-link-external' ></i></a>
                 </div>
             </div>
-            <div class="port-box rounded-[16px] shadow-md overflow-hidden flex items-center border-2 relative" :class="{'border-white': isDarkMode, 'border-black' : !isDarkMode}">
+            <div class="port-box scroll-scale  rounded-[16px] shadow-md overflow-hidden flex items-center border-2 relative" :class="{'border-white': isDarkMode, 'border-black' : !isDarkMode}">
                 <div class="port-img">
                     <img src="@/assets/laptop2.png" alt="">
                 </div>
@@ -39,20 +39,7 @@
                     <a href="#"><i class='bx bx-link-external' ></i></a>
                 </div>
             </div>
-            <div class="port-box rounded-[16px] shadow-md overflow-hidden flex items-center border-2 relative" :class="{'border-white': isDarkMode, 'border-black' : !isDarkMode}">
-                <div class="port-img">
-                    <img src="@/assets/laptop2.png" alt="">
-                </div>
-                <div class="port-content">
-                    <h3 class="text-[1.5rem] text-white">Graphic Design</h3>
-                    <p class="text-[13px] text-white text-center">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi magni doloremque minus odio alias ipsum accusantium animi temporibus numquam tempore.
-                    </p>
-                    <a href="#"><i class='bx bx-link-external' ></i></a>
-                </div>
-            </div>
-
-            <div class="port-box rounded-[16px] shadow-md overflow-hidden flex items-center border-2 relative" :class="{'border-white': isDarkMode, 'border-black' : !isDarkMode}">
+            <div class="port-box scroll-scale  rounded-[16px] shadow-md overflow-hidden flex items-center border-2 relative" :class="{'border-white': isDarkMode, 'border-black' : !isDarkMode}">
                 <div class="port-img">
                     <img src="@/assets/laptop2.png" alt="">
                 </div>
@@ -65,7 +52,7 @@
                 </div>
             </div>
 
-            <div class="port-box rounded-[16px] shadow-md overflow-hidden flex items-center border-2 relative" :class="{'border-white': isDarkMode, 'border-black' : !isDarkMode}">
+            <div class="port-box scroll-scale  rounded-[16px] shadow-md overflow-hidden flex items-center border-2 relative" :class="{'border-white': isDarkMode, 'border-black' : !isDarkMode}">
                 <div class="port-img">
                     <img src="@/assets/laptop2.png" alt="">
                 </div>
@@ -78,7 +65,20 @@
                 </div>
             </div>
 
-            <div class="port-box rounded-[16px] shadow-md overflow-hidden flex items-center border-2 relative" :class="{'border-white': isDarkMode, 'border-black' : !isDarkMode}">
+            <div class="port-box scroll-scale  rounded-[16px] shadow-md overflow-hidden flex items-center border-2 relative" :class="{'border-white': isDarkMode, 'border-black' : !isDarkMode}">
+                <div class="port-img">
+                    <img src="@/assets/laptop2.png" alt="">
+                </div>
+                <div class="port-content">
+                    <h3 class="text-[1.5rem] text-white">Graphic Design</h3>
+                    <p class="text-[13px] text-white text-center">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi magni doloremque minus odio alias ipsum accusantium animi temporibus numquam tempore.
+                    </p>
+                    <a href="#"><i class='bx bx-link-external' ></i></a>
+                </div>
+            </div>
+
+            <div class="port-box scroll-scale  rounded-[16px] shadow-md overflow-hidden flex items-center border-2 relative" :class="{'border-white': isDarkMode, 'border-black' : !isDarkMode}">
                 <div class="port-img">
                     <img src="@/assets/laptop2.png" alt="">
                 </div>

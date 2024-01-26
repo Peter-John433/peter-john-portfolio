@@ -9,7 +9,7 @@
    <div>
         <div id="about" class="about py-5 scroll-scale overflow-hidden sm:rounded-xl mt-20 flex flex-col sm:flex-row justify-center items-center sm:gap-x-20" :class="{'bg-black text-[#0e1217]' : isDarkMode, 'bg-white shadow-lg text-black' : !isDarkMode}">
             <div class="text-center relative rounded-full p-0 m-0 ">
-                <img src="@/assets/eche3-removebg-preview.png" class="max-w-[300px]  sm:w-full  object-cover rounded-br-full rounded-bl-full border-x-1" alt="">
+                <img src="@/assets/eche3-removebg-preview.png" class="  sm:w-full  object-cover rounded-br-full rounded-bl-full border-x-1" alt="">
             
                 <div class="about-info info-1"  :class="{' border border-[#d0d0d0] bg-black text-white' : isDarkMode, 'bg-white text-black border border-black' : !isDarkMode}">
                     <span class="plus text-[#37ac37]">5+</span>
@@ -34,12 +34,12 @@
                 </div>
 
                 <!-- just like in the app.vue social-icon-box verse-versa -->
-                <div class="social-icon mt-[1rem] mx-auto sm:mx-0">
-                  <a href="#" :class="{'bg-[#f1f1f1] shadow-md  before:bg-[blue] hover:text-white text-[blue]' : !isDarkMode, 'shadow-md bg-[blue] text-white before:bg-white hover:text-[blue]' : isDarkMode}"><i class='bx bxl-facebook'></i></a>
-                  <a href="#" :class="{'bg-[#f1f1f1] shadow-md text-[red] before:bg-[red] hover:text-white' : !isDarkMode, 'shadow-md bg-[red] text-white before:bg-white hover:text-[red]' : isDarkMode}"><i class='bx bxl-instagram-alt'></i></a>
-                  <a href="#" :class="{'bg-[#f1f1f1] shadow-md text-[#37ac37] before:bg-[#37ac37] hover:text-white' : !isDarkMode, 'shadow-md bg-[#37ac37] text-white before:bg-white hover:text-[#37ac37]' : isDarkMode}"><i class='bx bxl-upwork'></i></a>
-                  <a href="#" :class="{'bg-[#f1f1f1] shadow-md text-blue-700 before:bg-blue-700 hover:text-white' : !isDarkMode, 'shadow-md bg-blue-700 text-white before:bg-white hover:text-blue-700' : isDarkMode}"><i class='bx bxl-linkedin'></i></a>
-                  <a href="#" :class="{'bg-[#f1f1f1] shadow-md text-blue-500 before:bg-blue-500 hover:text-white' : !isDarkMode, 'shadow-md bg-blue-500 text-white before:bg-white hover:text-blue-500' : isDarkMode}"><i class='bx bxl-twitter'></i></a>
+                <div class="social-icon mt-[2rem] mx-auto sm:mx-0">
+                  <a href="#" :class="{'bg-[#f1f1f1] shadow-md  before:bg-[blue] hover:text-white text-[blue]' : isDarkMode, 'shadow-md bg-[blue] text-white before:bg-white hover:text-[blue]' : !isDarkMode}"><i class='bx bxl-facebook'></i></a>
+                  <a href="#" :class="{'bg-[#f1f1f1] shadow-md text-[red] before:bg-[red] hover:text-white' : isDarkMode, 'shadow-md bg-[red] text-white before:bg-white hover:text-[red]' : !isDarkMode}"><i class='bx bxl-instagram-alt'></i></a>
+                  <a href="#" :class="{'bg-[#f1f1f1] shadow-md text-[#37ac37] before:bg-[#37ac37] hover:text-white' : isDarkMode, 'shadow-md bg-[#37ac37] text-white before:bg-white hover:text-[#37ac37]' : !isDarkMode}"><i class='bx bxl-upwork'></i></a>
+                  <a href="#" :class="{'bg-[#f1f1f1] shadow-md text-blue-700 before:bg-blue-700 hover:text-white' : isDarkMode, 'shadow-md bg-blue-700 text-white before:bg-white hover:text-blue-700' : !isDarkMode}"><i class='bx bxl-linkedin'></i></a>
+                  <a href="#" :class="{'bg-[#f1f1f1] shadow-md text-blue-500 before:bg-blue-500 hover:text-white' : isDarkMode, 'shadow-md bg-blue-500 text-white before:bg-white hover:text-blue-500' : !isDarkMode}"><i class='bx bxl-twitter'></i></a>
                </div>
             </div>
         </div>
