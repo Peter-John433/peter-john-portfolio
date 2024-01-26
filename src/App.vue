@@ -22,7 +22,7 @@
 <template>
    <Header />
    <div class=" scroll-smooth">
-      <div class="px-3" :class="{'bg-[#0e1217] text-[#D0D0D0]' : isDarkMode, 'bg-[white] text-[#0e1217]' : !isDarkMode}">
+      <div class="px-3" :class="{'bg-black text-[#D0D0D0]' : isDarkMode, 'bg-[white] text-[#0e1217]' : !isDarkMode}">
       <div class="container mx-auto py-20   sm:w-full text-center sm:text-start" >
          <section id="home" class="home">
             <div class="home-content scroll-scale">
