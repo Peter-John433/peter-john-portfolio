@@ -23,7 +23,7 @@
 <template>
     <div class="gen-container w-full fixed z-10" :class="{'bg-white text-black' : isDarkMode, 'bg-black text-white' : !isDarkMode}">
         <header class="flex justify-between items-center container ">
-           <div class="header-logo text-[26px] font-[700] font-sans " :class="{'text-black': isDarkMode, 'text-white' : !isDarkMode}">
+           <div class="ps-5 text-[26px] font-[700] font-sans " :class="{'text-black': isDarkMode, 'text-white' : !isDarkMode}">
                <span class="j-logo font-[700]" >J</span>ohn
            </div>
                <ul class="block sm:flex  font-[500] header-list">
@@ -63,7 +63,9 @@
 
   @media screen and (max-width: 576px){
     #toggleBtn{
-      display: none;
+       position: absolute;
+       left: 50%;
+       transform: translate(-50%);
     }
     #menu-icon{
        display: block;
@@ -81,7 +83,7 @@
         display: flex;
         flex-direction: column;
         position: absolute;
-        background-color: green;
+        background-color: #f1f1f1;
         top: -1000px;
         left: 0%;
         right: 0%;
@@ -94,6 +96,7 @@
         display: block;
         font-size: 1rem;
         padding-bottom: 1rem;
+        padding: 20px 6px;
      }
 
     .header-list.open{

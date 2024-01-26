@@ -20,14 +20,29 @@
       justify-content: space-between;
       align-items: center;
       padding: 1.5rem;
-      /* background-color: #d0d0d0; */
-      
    }
 
    footer a{
-      /* color: black; */
       font-weight: 900;
       font-size: 1.5rem;
+   }
+
+   @media screen and (max-width: 576px){
+       footer p{
+          font-size: 16px;
+          text-align: center;
+          font-weight: 700;
+       }
+
+       footer a{
+          background-color: goldenrod;
+          border-radius: 50%;
+          height: 30px;
+          width: 30px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+       }
    }
 
 </style>

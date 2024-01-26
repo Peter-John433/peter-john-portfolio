@@ -7,9 +7,9 @@
 
 <template>
    <div>
-        <div id="about" class="about py-5 scroll-scale overflow-hidden sm:rounded-xl mt-20 flex flex-col sm:flex-row justify-center items-center sm:gap-x-20" :class="{'bg-black text-[#0e1217]' : isDarkMode, 'bg-white shadow-lg text-black' : !isDarkMode}">
+        <div id="about" class="about py-5 scroll-scale overflow-hidden sm:rounded-xl mt-20 flex flex-col sm:flex-row justify-center items-center sm:gap-x-20" :class="{'bg-black text-[#0e1217]' : isDarkMode, 'bg-white text-black ' : !isDarkMode}">
             <div class="text-center relative rounded-full p-0 m-0 ">
-                <img src="@/assets/eche3-removebg-preview.png" class="  sm:w-full  object-cover rounded-br-full rounded-bl-full border-x-1" alt="">
+                <img src="@/assets/eche3-removebg-preview.png" class="max-w-[300px]  sm:w-full  object-cover rounded-br-full rounded-bl-full border-x-1" alt="">
             
                 <div class="about-info info-1"  :class="{' border border-[#d0d0d0] bg-black text-white' : isDarkMode, 'bg-white text-black border border-black' : !isDarkMode}">
                     <span class="plus text-[#37ac37]">5+</span>
@@ -30,7 +30,7 @@
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem quae amet nesciunt dolore quas eaque. Sunt possimus voluptatem ad saepe.
                 </p>
                 <div class="btn-box mx-auto sm:mx-0 mt-3">
-                     <a href="#" class="btn"  :class="{' text-[#37ac37]  before:bg-[#37ac37] hover:text-white border border-[#37ac37]' : !isDarkMode, 'bg-[#D0D0D0] text-black before:bg-[#37ac37] hover:text-white border border-black' : isDarkMode}">Read more <i class='bx bxs-chevron-right-circle text-[1.5rem] ms-3 bx-flashing'></i></a>
+                     <a href="#" class="btn"  :class="{' text-[#37ac37]  before:bg-[#37ac37] hover:text-white border border-[#37ac37]' : !isDarkMode, 'bg-white text-black before:bg-[#37ac37] hover:text-white border border-black' : isDarkMode}">Read more <i class='bx bxs-chevron-right-circle text-[1.5rem] ms-3 bx-flashing'></i></a>
                 </div>
 
                 <!-- just like in the app.vue social-icon-box verse-versa -->

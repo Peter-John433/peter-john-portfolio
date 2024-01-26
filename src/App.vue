@@ -51,8 +51,8 @@
                   </div>
 
                   <div class="btn-box flex justify-between mt-[1.5rem] w-[320px] h-[46px] mx-auto sm:mx-0">
-                     <a href="#" class="btn" :class="{' text-[#37ac37]  before:bg-[#37ac37] hover:text-white border border-[#37ac37]' : !isDarkMode, 'bg-[#D0D0D0] text-black before:bg-[#37ac37] hover:text-white border border-black' : isDarkMode}">Download CV</a>
-                     <a href="#" class="btn" :class="{' text-[#37ac37]  before:bg-[#37ac37] hover:text-white border border-[#37ac37]' : !isDarkMode, 'bg-[#D0D0D0] text-black before:bg-[#37ac37] hover:text-white border border-black' : isDarkMode}">Hire Me</a>
+                     <a href="#" class="btn" :class="{' text-[#37ac37]  before:bg-[#37ac37] hover:text-white border border-[#37ac37]' : !isDarkMode, 'bg-[white] text-black before:bg-[#37ac37] hover:text-white border border-black' : isDarkMode}">Download CV</a>
+                     <a href="#" class="btn" :class="{' text-[#37ac37]  before:bg-[#37ac37] hover:text-white border border-[#37ac37]' : !isDarkMode, 'bg-white text-black before:bg-[#37ac37] hover:text-white border border-black' : isDarkMode}">Hire Me</a>
                   </div>
 
                   <div class="social-icon mt-[2rem] mx-auto  sm:mx-0">

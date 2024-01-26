@@ -78,5 +78,9 @@
         grid-template-columns: 1fr;
         width: 100%;
       }
+
+       .img-container img{
+        max-width: 350px;
+      }
    }
 </style>
