@@ -53,4 +53,4 @@ let headerList = document.querySelector('.header-list');
     scrollBotton.forEach((el)=>observer.observe(el));
 
     const scrollTop = document.querySelectorAll('.scroll-top');
-    scrollTop.forEach((el)=>observer.observe(el))
+    scrollTop.forEach((el)=>observer.observe(el));

@@ -23,7 +23,7 @@
 </script>
 
 <template>
-    <div class="gen-container w-full fixed z-10" :class="{'bg-[#D0D0D0] text-[#01010a]' : isDarkMode, 'bg-[#0e1217] text-[#D0D0D0]' : !isDarkMode}">
+    <div class="gen-container w-full fixed z-10" :class="{'bg-white text-black' : isDarkMode, 'bg-black text-white' : !isDarkMode}">
         <header class="flex justify-between items-center container ">
            <div class="header-logo text-[26px] font-[700] font-sans ">
                <span class="j-logo font-[700]">J</span>ohn
@@ -31,12 +31,12 @@
 
            
                <ul class="block sm:flex  font-[500] header-list">
-                 <a href="#home"><li>Home</li></a>
-                 <a href="#about"><li>About</li></a>
-                 <a href="#service"><li>Services</li></a>
-                 <a href="#portfolio"><li>Portfolio</li></a>
-                 <a href="#skills"><li>Skills</li></a>
-                 <a href="#contact"><li>Contact</li></a>
+                 <a href="#home" :class="{'hover:bg-black hover:text-white' : isDarkMode, 'hover:text-black hover:bg-white' : !isDarkMode}"><li>Home</li></a>
+                 <a href="#about" :class="{'hover:bg-black hover:text-white' : isDarkMode, 'hover:text-black hover:bg-white' : !isDarkMode}"><li>About</li></a>
+                 <a href="#service" :class="{'hover:bg-black hover:text-white' : isDarkMode, 'hover:text-black hover:bg-white' : !isDarkMode}"><li>Services</li></a>
+                 <a href="#portfolio" :class="{'hover:bg-black hover:text-white' : isDarkMode, 'hover:text-black hover:bg-white' : !isDarkMode}"><li>Portfolio</li></a>
+                 <a href="#skills" :class="{'hover:bg-black hover:text-white' : isDarkMode, 'hover:text-black hover:bg-white' : !isDarkMode}"><li>Skills</li></a>
+                 <a href="#contact" :class="{'hover:bg-black hover:text-white' : isDarkMode, 'hover:text-black hover:bg-white' : !isDarkMode}"><li>Contact</li></a>
                </ul>
           
            <div id="menu-icon" class="text-[2rem] mr-[16px] text-[yellow] block sm:hidden">
@@ -66,18 +66,18 @@
      /* color: var(--bg-color2); */
   }
 
-  .header-list a:hover{
+  /* .header-list a:hover{
      color: var(--bg-color2);
      background-color: #f1f1f1;
      color: black;
-     /* text-shadow: 0 0 10px rgba(255, 255, 0),
+     text-shadow: 0 0 10px rgba(255, 255, 0),
     0 0 20px rgba(255, 255, 0),
     0 0 30px rgba(255, 255, 0),
     0 0 40px rgba(255, 255, 0),
     0 0 70px rgba(255, 255, 0),
     0 0 100px rgba(255, 255, 0),
-    0 0 150px rgba(255, 255, 0); */
-  }
+    0 0 150px rgba(255, 255, 0);
+  } */
 
   @media screen and (min-width: 756px) and (max-width: 992)  {
   

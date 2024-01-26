@@ -8,7 +8,6 @@
    import Footer from '@/components/Footer.vue'
    import { colorMode } from './stores/Mode';
    import { storeToRefs } from 'pinia';
-   import { ref } from 'vue'
 
    const useModeStore = colorMode();
    const { isDarkMode } = storeToRefs(useModeStore)
@@ -23,7 +22,7 @@
 <template>
    <Header />
    <div class=" scroll-smooth">
-      <div class="px-3" :class="{'bg-[#0e1217] text-[#D0D0D0]' : isDarkMode, 'bg-[#D0D0D0] text-[#0e1217]' : !isDarkMode}">
+      <div class="px-3" :class="{'bg-[#0e1217] text-[#D0D0D0]' : isDarkMode, 'bg-[white] text-[#0e1217]' : !isDarkMode}">
       <div class="container mx-auto py-20   sm:w-full text-center sm:text-start" >
          <section id="home" class="home">
             <div class="home-content scroll-scale">
@@ -70,7 +69,7 @@
                   <img src="@/assets/eche3-removebg-preview.png" alt="">
                </div>
 
-               <div class="liquid-shape absolute top-[0%] left-[-5%] z-[-1]" >
+               <!-- <div class="liquid-shape absolute top-[0%] left-[-5%] z-[-1]" >
                   <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
                   <path fill="#D0D0D0">
                      <animate attributeName="d" 
@@ -81,9 +80,9 @@
                         M465,312Q442,374,396.5,423Q351,472,284,477Q217,482,155,456.5Q93,431,57.5,374Q22,317,21.5,250Q21,183,59,128Q97,73,157,46.5Q217,20,280.5,31.5Q344,43,392.5,85Q441,127,464.5,188.5Q488,250,465,312Z"></animate>
                   </path>
                   </svg>
-               </div>
+               </div> -->
 
-               <div class="liquid-shape-2 absolute top-[1%] z-[-1] left-[-5%]">
+               <!-- <div class="liquid-shape-2 absolute top-[1%] z-[-1] left-[-5%]">
                   <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
                   <defs>
                      <pattern id="pattern" x="0" y="0" width="28" height="49" patternUnits="userSpaceOnUse" fill="#D0D0D0">
@@ -108,7 +107,7 @@
                      </animate>
                   </path>
                   </svg>
-               </div>
+               </div> -->
             </div>
          </section>
 
