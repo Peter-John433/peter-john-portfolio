@@ -23,42 +23,42 @@
 <template>
     <div>
         <div id="skills" class="skills mt-40 scroll-scale scroll-smooth" :class="{'text-white' : isDarkMode, ' text-black' : !isDarkMode}">
-            <div class="main-text text-center font-[900] tracking-wider">
+            <div class="text-center font-[900] tracking-wider">
                 <span class="text-center text-[1.5rem] sm:text-[2rem] font-[900] tracking-wider">Technical and Profession</span>
                 <h2 class="text-center text-[1.5rem] sm:text-[2rem] font-[900] tracking-wider">
                     My Skills
                 </h2>
             </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 grid-rows-1 img-container justify-center justify-items-center gap-10 mt-10">
+            <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 grid-rows-1 img-container justify-center justify-items-center gap-10 mt-10">
                 <div>
-                    <img src="@/assets/html-logo.png" class="scroll-scale" alt="">
+                    <img src="@/assets/html-logo.png" class="" alt="">
                 </div>
                 <div>
-                    <img src="@/assets/css-logo.png" class="scroll-scale" alt="">
+                    <img src="@/assets/css-logo.png" class="" alt="">
                 </div>
                 <div>
-                    <img src="@/assets/javascript-logo.svg" class="scroll-scale" alt="">
+                    <img src="@/assets/javascript-logo.svg" class="" alt="">
                 </div>
                 <div>
-                    <img src="@/assets/bootstrap-logo.png" class="scroll-scale" alt="">
+                    <img src="@/assets/bootstrap-logo.png" class="" alt="">
                 </div>
                 <div>
-                    <img src="@/assets/tailwind-logo.png" class="scroll-scale" alt="">
+                    <img src="@/assets/tailwind-logo.png" class="" alt="">
                 </div>
                 <div>
-                    <img src="@/assets/vue-logo.png" class="scroll-scale" alt="">
+                    <img src="@/assets/vue-logo.png" class="" alt="">
                 </div>
                 <div>
-                    <img src="@/assets/postman-logo.svg" class="scroll-scale" alt="">
+                    <img src="@/assets/postman-logo.svg" class="" alt="">
                 </div>
                 <div>
-                    <img src="@/assets/pinia-logo.png" class="scroll-scale" alt="">
+                    <img src="@/assets/pinia-logo.png" class="" alt="">
                 </div>
                 <div>
-                    <img src="@/assets/git-logo-2.png" class="scroll-scale" alt="">
+                    <img src="@/assets/git-logo-2.png" class="" alt="">
                 </div>
                 <div>
-                    <img src="@/assets/github-logo.svg" class="scroll-scale" alt="">
+                    <img src="@/assets/github-logo.svg" class="" alt="">
                 </div>
             </div>
         </div>
