@@ -6,7 +6,7 @@
    import Projects from '@/components/Projects.vue';
    import Contact from '@/components/Contact.vue';
    import Footer from '@/components/Footer.vue'
-   import { colorMode } from './stores/Mode';
+   import { colorMode } from './stores/mode';
    import { storeToRefs } from 'pinia';
 
    const useModeStore = colorMode();

@@ -1,6 +1,6 @@
 <script setup>
     // import { ref } from 'vue'
-    import { colorMode } from '@/stores/Mode'
+    import { colorMode } from '@/stores/mode'
     import { storeToRefs } from 'pinia'
     const useModeStore = colorMode()
     const { isDarkMode } = storeToRefs(useModeStore);
