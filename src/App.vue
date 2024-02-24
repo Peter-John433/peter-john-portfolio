@@ -27,7 +27,7 @@
          <section id="home" class="home">
             <div class="home-content scroll-scale">
                <h1 :class="{' text-white' : isDarkMode, ' text-black' : !isDarkMode}">
-                  Hi!, I'm Peter John
+                  Hi!, I'm Peter John Frontend developer
                </h1>
 
                <div class="change-text inline-flex m-0">
@@ -229,6 +229,10 @@
     width: 80%;
  }
 
+  @media screen and (max-width: 768px ){
+ 
+ }
+
  
  @media screen and (max-width: 576px) {
      .home{
@@ -238,6 +242,10 @@
          height: 100%;
          width: 100%;
          gap: 0;
+     }
+
+     .home-content h1{
+        font-size: 1.2rem;
      }
 
      .img-box{
