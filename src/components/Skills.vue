@@ -52,7 +52,7 @@
                     <img src="@/assets/postman-logo.svg" class="" alt="">
                 </div>
                 <div>
-                    <img src="@/assets/pinia-logo.png" class="" alt="">
+                    <img src="@/assets/my-logo.png" class="" alt="">
                 </div>
                 <div>
                     <img src="@/assets/git-logo-2.png" class="" alt="">
